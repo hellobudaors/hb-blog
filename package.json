@@ -8,6 +8,7 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
+    "dotenv": "^6.0.0",
     "gatsby": "^2.0.0",
     "gatsby-source-prismic": "^1.2.0",
     "react": "^16.5.1",

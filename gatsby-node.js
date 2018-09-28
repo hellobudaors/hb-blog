@@ -33,27 +33,4 @@ exports.createPages = async ({ graphql, actions }) => {
     })
 
     return Promise.all([loadPosts])
-
-//     const pages = await graphql(`
-//     {
-//       allPrismicPage {
-//         edges {
-//           node {
-//             id
-//             slugs
-//           }
-//         }
-//       }
-//     }
-//   `)
-
-//     pages.data.allPrismicPage.edges.forEach(edge => {
-//         createPage({
-//             path: `/${edge.node.uid}`,
-//             component: path.resolve('./src/templates/post.js'),
-//             context: {
-//                 id: edge.node.id,
-//             },
-//         })
-//     })
 }

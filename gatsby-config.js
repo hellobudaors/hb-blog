@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
     siteMetadata: {
         title: 'Gatsby Starter Blog',
@@ -22,7 +24,7 @@ module.exports = {
                 // You can generate an access token in the "API & Security" section of
                 // your repository settings. Setting a "Callback URL" is not necessary.
                 // The token will be listed under "Permanent access tokens".
-                accessToken: "MC5XNjR1NWhFQUFDWUFVRERM.Qe-_ve-_vWlqau-_ve-_vUVzNmTvv73vv71577-977-9RO-_vXBq77-9a--_vQU3Xe-_vVw-77-9XQ",
+                accessToken: process.env.ACCESS_TOKEN,
 
                 // Set a link resolver function used to process links in your content.
                 // Fields with rich text formatting or links to internal content use this
