@@ -16,7 +16,7 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-  query($id: String!) {
+query($id: String!) {
     prismicBlogPost(id: {eq: $id}) {
         data {
             title {
@@ -29,5 +29,5 @@ export const query = graphql`
             }
         }
     }
-    }
+}
 `

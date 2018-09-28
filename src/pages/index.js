@@ -1,12 +1,32 @@
 import React from "react"
+import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 
-export default () => (
+export default ({ data }) => (
     <Layout>
-        <h1>Hi! I'm building a fake Gatsby site as part of a tutorial!</h1>
-        <p>
-            What do I like to do? Lots of course but definitely enjoy building
-            websites.
-    </p>
+        <h1>Test Prismic Blog</h1>
+        {data.allPrismicBlogPost.edges.map(({node}) => (
+            <div>
+                <Link to={ `/posts/${node.slugs}` }>{ node.data.title.text }</Link>
+            </div>
+        ))}
     </Layout>
 )
+
+export const query = graphql`
+{
+  allPrismicBlogPost(sort: { fields: [first_publication_date], order: DESC}) {
+    edges {
+      node {
+        id
+        slugs
+        data {
+          title {
+            text
+          }
+        }
+      }
+    }
+  }
+}
+`
