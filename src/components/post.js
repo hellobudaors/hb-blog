@@ -8,11 +8,11 @@ class Post extends React.Component {
         // const children = this.props.children
         const post = this.props.data
 
-        console.log(`post: ` + JSON.stringify(RichText.asText(post.title)))
+        // console.log(`post: ` + JSON.stringify(RichText.asText(post.title)))
 
-        const richTextLinkResolver = function (doc) {
-            // To be implemented
-        }
+        // const richTextLinkResolver = function (doc) {
+        //     // To be implemented
+        // }
 
         var body, title
         if (this.props.html) {
