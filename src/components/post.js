@@ -1,6 +1,8 @@
 import React from "react"
 import PropTypes from 'prop-types'
 import { RichText } from 'prismic-reactjs'
+import { Styles } from "./styles";
+import PostTitle from "./post-title";
 
 class Post extends React.Component {
 
@@ -14,12 +16,13 @@ class Post extends React.Component {
             // To be implemented
         }
 
-        var body, title, excerpt, featureImageURL
+        var body, title, excerpt, featureImageURL, featureImageAlt
         if (this.props.html) {
             // Live post rendering
             title = post.title.text
             excerpt = post.excerpt.text
             featureImageURL = post.feature_image.url
+            featureImageAlt = post.feature_image.alt
             body = <section className="post-content" dangerouslySetInnerHTML={ {
                 __html: post.post_body.html,
             } } />
@@ -28,15 +31,17 @@ class Post extends React.Component {
             title = RichText.asText(post.title)
             excerpt = RichText.asText(post.excerpt)
             featureImageURL = post.feature_image.url
+            featureImageAlt = post.feature_image.alt
             body = <section className="post-content">{ RichText.render(post.post_body, richTextLinkResolver) }</section>
         }
 
         return (
-            <div className="post-container">
-                <h1>{ title }</h1>
-                { featureImageURL ? <img src={ featureImageURL } alt="" /> : null }
-                { excerpt ? <div>{ excerpt }</div> : null }
-                { body }
+            <div className="pt5">
+                <PostTitle featureImageUrl={ featureImageURL } featureImageAlt={ featureImageAlt }>{ title }</PostTitle>
+                <div className={ Styles.page.m + Styles.sideSpacing + `post-container mt4` }>
+                    { excerpt ? <div className="excerpt f3 lh-copy">{ excerpt }</div> : null }
+                    <div className="post-body lh-copy">{ body }</div>
+                </div>
             </div>
         )
     }

@@ -21,7 +21,6 @@ class Preview extends React.Component {
         var that = this
 
         const apiLinkResolver = function (doc) {
-            // console.log(`doc: ` + JSON.stringify(doc))
             post = doc.data
             that.forceUpdate()
         }
