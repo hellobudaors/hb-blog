@@ -3,7 +3,7 @@ const path = require('path')
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions
 
-    const loadPosts = new Promise((resolve, reject) => {
+    const loadHomePosts = new Promise((resolve, reject) => {
         graphql(`
         {
             allPrismicBlogPost {
@@ -34,5 +34,17 @@ exports.createPages = async ({ graphql, actions }) => {
         })
     })
 
-    return Promise.all([loadPosts])
+    return Promise.all([loadHomePosts])
 }
+
+
+// {
+//     allPrismicBlogPost(filter: { tags: { in: "Mini interjúk" } }) {
+//         edges {
+//             node {
+//                 id
+//                 slugs
+//             }
+//         }
+//     }
+// }

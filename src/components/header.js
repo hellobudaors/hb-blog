@@ -16,10 +16,12 @@ class Header extends React.Component {
                         <h4 className="w3 flex justify-end light-gray">SOCIAL SOCIAL</h4>
                     </div>
                     <ul className="flex list pa0 ma0 justify-center">
-                        <li className="mh3">Mini interjúk</li>
-                        <li className="mh3">Programok</li>
-                        <li className="mh3">Mit eszünk ma?</li>
-                        <li className="mh3">Kultúrált jó estét</li>
+                        <li className="mh3"><Link to="/" className="link black dim">Hello</Link></li>
+                        <li className="mh3"><Link to="/archive/mini-interjuk/" className="link black dim">Mini interjúk</Link></li>
+                        <li className="mh3"><Link to="/archive/programok/" className="link black dim">Programok</Link></li>
+                        <li className="mh3"><Link to="/archive/gasztro/" className="link black dim">Gasztro</Link></li>
+                        <li className="mh3"><Link to="/archive/kultura/" className="link black dim">Kultúra</Link></li>
+                        <li className="mh3"><Link to="/archive/sport/" className="link black dim">Sport és szabadidő</Link></li>
                     </ul>
                 </header>
             </>
