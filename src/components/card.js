@@ -17,7 +17,7 @@ class Card extends React.Component {
 
             return (
                 <Link key={ node.id } to={ `/posts/${node.slugs[0]}` } className={ cardClass }>
-                    <h2 key={ node.id } className="pa0 ma0 lh-title">{ node.data.title.text }</h2>
+                    <h2 key={ node.id } className="pa0 ma0 lh-title barlow-condensed f2">{ node.data.title.text }</h2>
                     <p className="pa0 ma0 mt3 lh-copy flex-auto  overflow-hidden">{ node.data.excerpt.text }</p>
                     <p className="pa0 ma0 self-end">Olvass</p>
                 </Link>
