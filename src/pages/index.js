@@ -6,9 +6,9 @@ export default ({ data }) => (
     <Layout>
         <h1>Test Prismic Blog</h1>
         {data.allPrismicBlogPost.edges.map(({node}) => (
-            <div>
-                <Link to={ `/posts/${node.slugs}` }>{ node.data.title.text }</Link>
-            </div>
+          <div key={ node.id }>
+            <Link to={ `/posts/${node.slugs[0]}` }>{ node.data.title.text }</Link>
+          </div>
         ))}
     </Layout>
 )

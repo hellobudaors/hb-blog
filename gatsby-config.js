@@ -3,9 +3,6 @@ require('dotenv').config()
 module.exports = {
     siteMetadata: {
         title: 'Gatsby Starter Blog',
-        author: 'Kyle Mathews',
-        description: 'A starter blog demonstrating what Gatsby can do.',
-        siteUrl: 'https://gatsbyjs.github.io/gatsby-starter-blog/',
     },
     plugins: [
         /*
@@ -34,7 +31,12 @@ module.exports = {
                 // different link resolver logic for each field if necessary.
                 // See: https://prismic.io/docs/javascript/query-the-api/link-resolving
                 linkResolver: ({ node, key, value }) => doc => {
-                    // Your link resolver
+
+                    // Resolves blog post links in content
+                    if (doc.type === `blog_post`) return `/posts/` + doc.slug
+
+                    // Fallback for other types, in case new custom types get created
+                    return `/`
                 },
 
                 // Set an HTML serializer function used to process formatted content.
@@ -50,6 +52,7 @@ module.exports = {
                     }
                 )
             }
-        }
+        },
+        'gatsby-plugin-react-helmet',
     ]
 }
