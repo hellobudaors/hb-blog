@@ -14,11 +14,15 @@ class Post extends React.Component {
             // To be implemented
         }
 
-        var body, title
+        var body, title, excerpt, featureImageURL
         if (this.props.html) {
             
             // Live post rendering
             title = post.title.text
+            excerpt = post.excerpt.text
+            // console.log(`feature image: ` + JSON.stringify(post.feature_image))
+            featureImageURL = post.feature_image.url
+            
             body = <section className="post-content" dangerouslySetInnerHTML={ {
                 __html: post.post_body.html,
             } } />
@@ -26,14 +30,16 @@ class Post extends React.Component {
 
             // Preview rendering
             title = RichText.asText(post.title)
+            excerpt = RichText.asText(post.excerpt)
             body = <section className="post-content">{ RichText.render(post.post_body, richTextLinkResolver) }</section>
         }
 
         return (
             <div>
                 <h1>{ title }</h1>
+                { featureImageURL ? <img src={ featureImageURL } /> : null }
+                { excerpt ? <div>{ excerpt }</div> : null }
                 { body }
-                {/* <section className="post-content">{ RichText.render(post.data.post_body, richTextLinkResolver) }</section> */}
             </div>
         )
     }

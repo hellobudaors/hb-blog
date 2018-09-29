@@ -20,9 +20,18 @@ query($id: String!) {
             title {
                 text
             }
+            feature_image {
+                alt
+                copyright
+                url
+            }
+            excerpt {
+                html
+                text
+            }
             post_body {
                 html
-            }
+            }      
         }
     }
 }
