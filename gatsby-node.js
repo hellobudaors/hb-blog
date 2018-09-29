@@ -18,6 +18,7 @@ exports.createPages = async ({ graphql, actions }) => {
         `).then((result) => {
             result.data.allPrismicBlogPost.edges.forEach(({ node }) => {
                 const slug = node.slugs[0]
+                
 
                 createPage({
                     path: `/posts/${slug}`,
@@ -34,17 +35,40 @@ exports.createPages = async ({ graphql, actions }) => {
         })
     })
 
-    return Promise.all([loadHomePosts])
+    const generateArchives = new Promise((resolve, reject) => {
+        graphql(`
+        {
+            allPrismicTag {
+                edges {
+                    node {
+                        id
+                        prismicId
+                        slugs
+                        data {
+                            tag
+                        }
+                    }
+                }
+            }
+        }
+        `).then((result) => {
+                result.data.allPrismicTag.edges.forEach(({ node }) => {
+                    const slug = node.slugs[0]
+                    
+                    createPage({
+                        path: `/archives/${slug}`,
+                        component: path.resolve(`./src/templates/archive.js`),
+                        context: {
+                            id: node.prismicId,
+                            slug: slug,
+                        },
+                    })
+                })
+                resolve()
+            }).catch(() => {
+                resolve()
+            })
+    })
+
+    return Promise.all([loadHomePosts, generateArchives])
 }
-
-
-// {
-//     allPrismicBlogPost(filter: { tags: { in: "Mini interjúk" } }) {
-//         edges {
-//             node {
-//                 id
-//                 slugs
-//             }
-//         }
-//     }
-// }

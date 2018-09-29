@@ -17,11 +17,11 @@ class Header extends React.Component {
                     </div>
                     <ul className="flex list pa0 ma0 justify-center">
                         <li className="mh3"><Link to="/" className="link black dim">Hello</Link></li>
-                        <li className="mh3"><Link to="/archive/mini-interjuk/" className="link black dim">Mini interjúk</Link></li>
-                        <li className="mh3"><Link to="/archive/programok/" className="link black dim">Programok</Link></li>
-                        <li className="mh3"><Link to="/archive/gasztro/" className="link black dim">Gasztro</Link></li>
-                        <li className="mh3"><Link to="/archive/kultura/" className="link black dim">Kultúra</Link></li>
-                        <li className="mh3"><Link to="/archive/sport/" className="link black dim">Sport és szabadidő</Link></li>
+                        <li className="mh3"><Link to="/archives/mini-interjuk/" className="link black dim">Mini interjúk</Link></li>
+                        <li className="mh3"><Link to="/archives/programok/" className="link black dim">Programok</Link></li>
+                        <li className="mh3"><Link to="/archives/gasztro/" className="link black dim">Gasztro</Link></li>
+                        <li className="mh3"><Link to="/archives/kultura/" className="link black dim">Kultúra</Link></li>
+                        <li className="mh3"><Link to="/archives/sport/" className="link black dim">Sport és szabadidő</Link></li>
                     </ul>
                 </header>
             </>
