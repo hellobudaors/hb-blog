@@ -19,8 +19,6 @@ exports.createPages = async ({ graphql, actions }) => {
             result.data.allPrismicBlogPost.edges.forEach(({ node }) => {
                 const slug = node.slugs[0]
 
-                console.log(`slug: ` + slug)
-
                 createPage({
                     path: `/posts/${slug}`,
                     component: path.resolve(`./src/templates/post.js`),
