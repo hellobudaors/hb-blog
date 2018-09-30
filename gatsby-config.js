@@ -15,7 +15,7 @@ module.exports = {
                 // The name of your prismic.io repository. This is required.
                 // Example: 'gatsby-source-prismic-test-site' if your prismic.io address
                 // is 'gatsby-source-prismic-test-site.prismic.io'.
-                repositoryName: "hb-test-blog",
+                repositoryName: "hello-budaors",
 
                 // An API access token to your prismic.io repository. This is required.
                 // You can generate an access token in the "API & Security" section of

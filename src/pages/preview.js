@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 import Post from "../components/post"
 // import Cookies from 'js-cookie'
 
-const apiEndpoint = 'http://hb-test-blog.prismic.io/api/v2'
+const apiEndpoint = 'http://hello-budaors.prismic.io/api/v2'
 
 var post
 
