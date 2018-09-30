@@ -9,3 +9,13 @@
 .post-body .block-img {
     margin: 0 -120px;
 }
+
+.post-body a {
+    color: #00AEED;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.post-body a:hover {
+    box-shadow: 0 1px 0px 0px #00AEED;
+}
