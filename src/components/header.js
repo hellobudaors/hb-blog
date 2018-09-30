@@ -20,6 +20,7 @@ class Header extends React.Component {
                         <h4 className="w3 flex justify-end light-gray"><Link to="/" className="link dim"><Icon name="facebook" class="dark-gray" /></Link></h4>
                     </div>
                     <ul className="flex list pa0 ma0 justify-center">
+                        <li className="mh3"><Link to="/" className={ linkClass }>Hello</Link></li>
                         <li className="mh3"><Link to="/archives/mini-interjuk/" className={ linkClass }>Mini interjúk</Link></li>
                         <li className="mh3"><Link to="/archives/programok/" className={ linkClass }>Programok</Link></li>
                         <li className="mh3"><Link to="/archives/gasztro/" className={ linkClass }>Gasztro</Link></li>

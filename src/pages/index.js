@@ -5,7 +5,7 @@ import { graphql } from 'gatsby'
 
 export default ({ data }) => (
     <Layout>
-        <PostList>{ data }</PostList>
+        <PostList page="index">{ data }</PostList>
     </Layout>
 )
 

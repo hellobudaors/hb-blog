@@ -12,18 +12,19 @@ class PostTitle extends React.Component {
                 <div style={{
                     background: `url(${this.props.featureImageUrl})`,
                     backgroundSize: `cover`,
+                    backgroundPosition: `center`,
                     minHeight: `500px`,
                 } } className="flex flex-column justify-end">
                     {/* <div className="bg-red">Hello</div> */}
                     <div className={ Styles.page.m + Styles.sideSpacing + `w-100`}>
-                        <h1 className="f1 white ma0 pa4 bg-black-70 nl4 pr6 dib lh-title barlow-condensed">{ title }</h1>
+                        <h1 className="f-subheadline white ma0 pa4 bg-black-70 nl4 pr6 dib lh-title barlow-condensed">{ title }</h1>
                     </div>
                 </div>
             )
         } else {
             return (
                 <div className={ Styles.page.m + Styles.sideSpacing }>
-                    <h1 className="f1 lh-title barlow-condensed">{ title }</h1>
+                    <h1 className="f-subheadline lh-title barlow-condensed">{ title }</h1>
                 </div>
             )
         }

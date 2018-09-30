@@ -40,7 +40,7 @@ class Post extends React.Component {
                 <PostTitle featureImageUrl={ featureImageURL } featureImageAlt={ featureImageAlt }>{ title }</PostTitle>
                 <div className={ Styles.page.m + Styles.sideSpacing + `post-container mt4` }>
                     { excerpt ? <div className="excerpt f3 lh-copy serif">{ excerpt }</div> : null }
-                    <div className="post-body lh-copy serif">{ body }</div>
+                    <div className="post-body lh-copy serif f4">{ body }</div>
                 </div>
             </div>
         )

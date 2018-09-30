@@ -5,4 +5,5 @@ export const Styles = {
         m: ` mw7 center `,
     },
     sideSpacing: ` ph5 `,
+    gutter: ` gutter4 `,
 }
