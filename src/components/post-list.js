@@ -1,7 +1,8 @@
 import React from 'react'
 import { Styles } from './styles'
-import Card from './card';
+import Card from './card'
 import PropTypes from 'prop-types'
+import Icon from './icon'
 
 class PostList extends React.Component {
     render() {
@@ -41,7 +42,7 @@ class PostList extends React.Component {
             // ))
 
             return (
-                <div className={ Styles.page.xl + Styles.sideSpacing + Styles.gutter + `mt5 grid-12` } style={ {
+                <div className={ Styles.page.xl + Styles.sideSpacing + Styles.gutter + `mt4 grid-12` } style={ {
                     gridTemplateRows: gridTemplateRows,
                     gridAutoRows: `480px`,
                 } }>
@@ -50,8 +51,11 @@ class PostList extends React.Component {
             )
         } else {
             return (
-                <div className={ Styles.page.xl + Styles.sideSpacing + `mt5` }>
-                    <p className="tc">Nincs bejegyzés.</p>
+                <div className={ Styles.page.xl + Styles.sideSpacing + `mt6 mb7` }>
+                    <p className="flex flex-column items-center fw7 dark-gray">
+                    <Icon name="gift" class="mb2 mr2 dark-gray" width="48" height="48" />
+                        Hamarosan...
+                    </p>
                 </div>
             )
         }

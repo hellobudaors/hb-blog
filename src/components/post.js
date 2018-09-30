@@ -36,9 +36,9 @@ class Post extends React.Component {
         }
 
         return (
-            <div className="pt5">
+            <div className="pt4">
                 <PostTitle featureImageUrl={ featureImageURL } featureImageAlt={ featureImageAlt }>{ title }</PostTitle>
-                <div className={ Styles.page.m + Styles.sideSpacing + `post-container mt4` }>
+                <div className={ Styles.page.m + Styles.sideSpacing + `post-container mt4 pb6` }>
                     { excerpt ? <div className="excerpt f3 lh-copy serif">{ excerpt }</div> : null }
                     <div className="lh-copy serif f4">{ body }</div>
                 </div>

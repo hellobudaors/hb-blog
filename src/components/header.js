@@ -26,7 +26,7 @@ class Header extends React.Component {
                             <li className="mh3"><Link to="/archives/kultura/" className={ linkClass }>Kultúra</Link></li>
                             <li className="mh3"><Link to="/archives/sport/" className={ linkClass }>Sport és szabadidő</Link></li>
                         </ul>
-                        <h4 className="w3 flex justify-end light-gray"><Link to="/" className="link dim"><Icon name="facebook" class="dark-gray" /></Link></h4>
+                        <h4 className="w3 flex justify-end light-gray"><a href="https://www.facebook.com/hellobudaors/" target="_blank" className="link dim"><Icon name="facebook" class="dark-gray" /></a></h4>
                     </div>
                 </header>
             </>

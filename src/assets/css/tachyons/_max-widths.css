@@ -45,6 +45,8 @@
 .mw8  {  max-width: 64rem; }
 .mw9  {  max-width: 96rem; }
 
+.mw-post { max-width: 54rem; }
+
 /* Max Width String Properties */
 
 .mw-none { max-width: none; }
@@ -62,6 +64,8 @@
   .mw8-ns  {  max-width: 64rem; }
   .mw9-ns  {  max-width: 96rem; }
 
+  .mw-post-ns { max-width: 54rem; }
+
   .mw-none-ns { max-width: none; }
 }
 
@@ -78,6 +82,8 @@
   .mw8-m  {  max-width: 64rem; }
   .mw9-m  {  max-width: 96rem; }
 
+  .mw-post-m { max-width: 54rem; }
+
   .mw-none-m { max-width: none; }
 }
 
@@ -93,6 +99,8 @@
   .mw7-l  {  max-width: 48rem; }
   .mw8-l  {  max-width: 64rem; }
   .mw9-l  {  max-width: 96rem; }
+
+  .mw-post-l { max-width: 54rem; }
 
   .mw-none-l { max-width: none; }
 }

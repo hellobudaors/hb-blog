@@ -66,17 +66,17 @@ class Card extends React.Component {
                     var cardClass, textColor, secondaryColor
                     switch (node.data.post_type) {
                         case `Piros`:
-                            cardClass = `br bw3 b--light-blue bg-light-red `
+                            cardClass = `bt bw2 b--light-blue bg-light-red `
                             textColor = `white `
                             secondaryColor = `light-blue`
                             break;
                         case `Sárga`:
-                            cardClass = `bg-gold `
+                            cardClass = `bt bw2 b--yellow bg-gold `
                             textColor = `near-black `
                             secondaryColor = `near-black`
                             break;
                         case `Zöld`:
-                            cardClass = `br bw3 b--light-green bg-green `
+                            cardClass = `bt bw2 b--light-green bg-green `
                             textColor = `white `
                             secondaryColor = `light-green`
                             break;
@@ -96,7 +96,7 @@ class Card extends React.Component {
 
                     if (node.data.feature_image.url) {
                         card =
-                            <Link to={ `/posts/${node.slugs[0]}` } className={ colSpan + `pa4 db no-underline grow flex flex-column dark-gray bg-near-white` }>
+                            <Link to={ `/posts/${node.slugs[0]}` } className={ colSpan + `pa4 db no-underline grow flex flex-column bt b--dark-gray bw2 dark-gray bg-near-white` }>
                                 <div className="h5 nl4 nt4 nr4" style={{
                                     background: `url(${node.data.feature_image.url})`,
                                     backgroundPosition: `center`,
@@ -107,10 +107,7 @@ class Card extends React.Component {
                             </Link>
                     } else {
                         card =
-                            <Link to={ `/posts/${node.slugs[0]}` } className={ colSpan + `pa4 db no-underline grow flex flex-column bt b--moon-gray dark-gray bg-near-white` } style={{
-                                borderTopColor: `#333`,
-                                borderTopWidth: `3px`
-                            }}>
+                            <Link to={ `/posts/${node.slugs[0]}` } className={ colSpan + `pa4 db no-underline grow flex flex-column bt b--dark-gray bw2 dark-gray bg-near-white` }>
                                 <h2 key={ node.id } className="pa0 ma0 lh-title barlow-condensed f2 word-wrap measure">{ node.data.title.text }</h2>
                                 <p className="pa0 ma0 mt3 lh-copy overflow-hidden sans-serif dark-gray f5 word-wrap measure">{ node.data.excerpt.text }</p>
                                 <p className="pa0 ma0 self-end mt3"><Icon name="arrow-right" class="dark-gray" /></p>

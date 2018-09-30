@@ -10,7 +10,9 @@ class Archive extends React.Component {
 
         return (
             <Layout>
-                <h1 className={ Styles.page.xl + Styles.sideSpacing + `barlow f-subheadline lh-solid` }>{ this.props.pageContext.tag }</h1>
+                <div className={ Styles.page.xl + Styles.sideSpacing}>
+                    <h1 className={ `ma0 pa0 pt4 mt4 pb3 barlow f-subheadline lh-solid bw3 bt b--gold` }>{ this.props.pageContext.tag }</h1>
+                </div>
                 <PostList>{ data }</PostList>
             </Layout>
         )
