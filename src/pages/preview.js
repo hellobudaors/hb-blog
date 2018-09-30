@@ -4,6 +4,7 @@ import Prismic from 'prismic-javascript'
 // import { RichText } from 'prismic-reactjs'
 import Layout from '../components/layout'
 import Post from "../components/post"
+import Icon from "../components/icon";
 // import Cookies from 'js-cookie'
 
 const apiEndpoint = 'https://hello-budaors.cdn.prismic.io/api/v2'
@@ -61,7 +62,10 @@ class Preview extends React.Component {
         } else {
             return (
                 <Layout>
-                    <p>Loading preview...</p>
+                    <div className="flex flex-column justify-center items-center pt7 pb7">
+                        <Icon name="clock" width="36" height="36" class="dark-gray mb1 mr2" />
+                        Előnézet betöltése...
+                    </div>
                 </Layout>
             )
         }
