@@ -88,11 +88,11 @@
 
 .grow:hover,
 .grow:focus {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .grow:active {
-  transform: scale(.90);
+  transform: scale(.98);
 }
 
 .grow-large {

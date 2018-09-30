@@ -14,7 +14,7 @@ class DefaultLayout extends React.Component {
                 <Helmet>
                     <title>Hello Budaörs</title>
                     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:500|Barlow:700" rel="stylesheet"></link>
-                    <body className="sans-serif dark-gray" />
+                    <body className="sans-serif dark-gray bg-white" />
                 </Helmet>
 
                 <Header />

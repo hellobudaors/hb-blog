@@ -61,6 +61,7 @@ exports.createPages = async ({ graphql, actions }) => {
                         context: {
                             id: node.prismicId,
                             slug: slug,
+                            tag: node.data.tag,
                         },
                     })
                 })

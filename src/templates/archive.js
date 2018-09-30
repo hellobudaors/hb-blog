@@ -2,12 +2,22 @@ import React from 'react'
 import Layout from '../components/layout'
 import PostList from '../components/post-list'
 import { graphql } from 'gatsby'
+import { Styles } from '../components/styles';
 
-export default ({ data }) => (
-    <Layout>
-        <PostList>{ data }</PostList>
-    </Layout>
-)
+class Archive extends React.Component {
+    render() {
+        const data = this.props.data
+
+        return (
+            <Layout>
+                <h1 className={ Styles.page.xl + Styles.sideSpacing + `barlow f-subheadline lh-solid` }>{ this.props.pageContext.tag }</h1>
+                <PostList>{ data }</PostList>
+            </Layout>
+        )
+    }
+}
+
+export default Archive
 
 export const query = graphql`
 query($id: String!) {
@@ -29,6 +39,15 @@ query($id: String!) {
                         alt
                         copyright
                         url
+                    }
+                    custom_tags {
+                        tag {
+                            document {
+                                data {
+                                    tag
+                                }
+                            }
+                        }
                     }
                 }
             }

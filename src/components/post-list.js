@@ -10,7 +10,7 @@ class PostList extends React.Component {
         if (data.allPrismicBlogPost) {
 
             var cards = []
-            var gridTemplateRows = `350px`
+            var gridTemplateRows = `480px`
 
             for (let i = 0; i < data.allPrismicBlogPost.edges.length; i++) {
                 const element = data.allPrismicBlogPost.edges[i].node
@@ -43,7 +43,7 @@ class PostList extends React.Component {
             return (
                 <div className={ Styles.page.xl + Styles.sideSpacing + Styles.gutter + `mt5 grid-12` } style={ {
                     gridTemplateRows: gridTemplateRows,
-                    gridAutoRows: `350px`,
+                    gridAutoRows: `480px`,
                 } }>
                     { cards }
                 </div>

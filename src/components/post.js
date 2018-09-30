@@ -23,7 +23,7 @@ class Post extends React.Component {
             excerpt = post.excerpt.text
             featureImageURL = post.feature_image.url
             featureImageAlt = post.feature_image.alt
-            body = <section className="post-content" dangerouslySetInnerHTML={ {
+            body = <section className="post-body" dangerouslySetInnerHTML={ {
                 __html: post.post_body.html,
             } } />
         } else {
@@ -32,7 +32,7 @@ class Post extends React.Component {
             excerpt = RichText.asText(post.excerpt)
             featureImageURL = post.feature_image.url
             featureImageAlt = post.feature_image.alt
-            body = <section className="post-content">{ RichText.render(post.post_body, richTextLinkResolver) }</section>
+            body = <section className="post-body">{ RichText.render(post.post_body, richTextLinkResolver) }</section>
         }
 
         return (
@@ -40,7 +40,7 @@ class Post extends React.Component {
                 <PostTitle featureImageUrl={ featureImageURL } featureImageAlt={ featureImageAlt }>{ title }</PostTitle>
                 <div className={ Styles.page.m + Styles.sideSpacing + `post-container mt4` }>
                     { excerpt ? <div className="excerpt f3 lh-copy serif">{ excerpt }</div> : null }
-                    <div className="post-body lh-copy serif f4">{ body }</div>
+                    <div className="lh-copy serif f4">{ body }</div>
                 </div>
             </div>
         )
