@@ -16,12 +16,12 @@ class Card extends React.Component {
                 card = 
                     <Link to={ `/posts/${node.slugs[0]}` } className="col-12 db no-underline flex items-stretch white">
                         <div className={ Styles.gutter + `grid-12 w-100` }>
-                            <div className="col-4 pa4 flex flex-column justify-between bg-dark-gray bt bw3 b--gold">
+                            <div className="col-4-l col-6-m col-12 pa4 flex flex-column justify-between bg-dark-gray bt bw3 b--gold">
                                 <h2 key={ node.id } className="pa0 ma0 lh-title barlow f1 word-wrap">{ node.data.title.text }</h2>
                                 <p className="pa0 ma0 mt4 lh-copy flex-auto f4 serif word-wrap">{ node.data.excerpt.text }</p>
                                 <p className="pa0 ma0 self-end mt4"><Icon name="arrow-right" class="white" /></p>
                             </div>
-                            <div className="col-8 nl4 bt bw3 b--gold home-default-bg" style={{
+                            <div className="col-8-l col-6-m col-12 nl4-m nl4-l bt bw3 b--gold home-default-bg dn db-m db-l" style={{
                                 background: (node.data.feature_image.url ? `url(${node.data.feature_image.url}) no-repeat` : null),
                                 backgroundSize: `cover`,
                                 backgroundPosition: `center`,

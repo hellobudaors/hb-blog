@@ -1,4 +1,7 @@
 require('dotenv').config()
+const cssNano = require(`cssnano`)
+const postcssCustomMedia = require('postcss-custom-media')
+const postcssColorMod = require('postcss-color-mod-function')
 
 module.exports = {
     siteMetadata: {
@@ -54,5 +57,15 @@ module.exports = {
             }
         },
         'gatsby-plugin-react-helmet',
+        {
+            resolve: `gatsby-plugin-postcss`,
+            options: {
+                postCssPlugins: [
+                    postcssCustomMedia(),
+                    postcssColorMod(),
+                    cssNano({ preset: `default`, })
+                ],
+            },
+        },
     ]
 }

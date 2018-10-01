@@ -16,7 +16,7 @@ class PostList extends React.Component {
             for (let i = 0; i < data.allPrismicBlogPost.edges.length; i++) {
                 const element = data.allPrismicBlogPost.edges[i].node
                 var cardType = ``
-                var colSpan = `col-4`
+                var colSpan = `col-4-l col-6-m col-12`
                 
                 if (this.props.page === `index`) {
                     if (i == 0) {
@@ -24,11 +24,11 @@ class PostList extends React.Component {
                         gridTemplateRows = `minmax(460px, auto)`
                     }
                     if (((i + 1) % 5 == 0 && (i + 1) % 10 != 0) || i % 10 == 0) {
-                        colSpan = `col-8`
+                        colSpan = `col-12 col-8-l`
                     }
                 } else {
                     if (i == 0 || (i % 5 == 1 && i % 10 != 1) || i % 10 == 0) {
-                        colSpan = `col-8`
+                        colSpan = `col-12 col-8-l`
                     }
                 }
 
