@@ -11,23 +11,25 @@ class Header extends React.Component {
 
         return (
             <>
-                <header className={ Styles.page.xl + Styles.sideSpacing + `flex flex-column mt4` }>
-                    <h4 className="col-10 ttu flex-auto flex justify-center">
+                <header className={ Styles.page.xl + Styles.sideSpacing + `flex flex-wrap justify-between items-center mt4` }>
+                    <h4 className="ttu flex-auto flex justify-center w-100">
                         <Link to="/"><img src={ Logo } /></Link>
                     </h4>
 
-                    <div className="flex items-center flex-auto justify-between">
-                        <h4 className="w3"><Link to="/" className="link dim"><Icon name="home" class="dark-gray" /></Link></h4>
-                        <ul className="flex list pa0 ma0 justify-center">
-                            <li className="mh3"><Link to="/" className={ linkClass }>Hello</Link></li>
-                            <li className="mh3"><Link to="/archives/mini-interjuk/" className={ linkClass }>Mini interjúk</Link></li>
-                            <li className="mh3"><Link to="/archives/programok/" className={ linkClass }>Programok</Link></li>
-                            <li className="mh3"><Link to="/archives/gasztro/" className={ linkClass }>Gasztro</Link></li>
-                            <li className="mh3"><Link to="/archives/kultura/" className={ linkClass }>Kultúra</Link></li>
-                            <li className="mh3"><Link to="/archives/sport/" className={ linkClass }>Sport és szabadidő</Link></li>
-                        </ul>
-                        <h4 className="w3 flex justify-end light-gray"><a href="https://www.facebook.com/hellobudaors/" target="_blank" className="link dim"><Icon name="facebook" class="dark-gray" /></a></h4>
-                    </div>
+                    <h4 className="w3"><Link to="/" className="link dim"><Icon name="home" class="dark-gray" /></Link></h4>
+                    <ul className="flex list pa0 ma0 justify-center items-center">
+                        <li className="mh3 tc"><Link to="/" className={ linkClass }>Hello</Link></li>
+                        <li className="mh3 tc"><Link to="/archives/mini-interjuk/" className={ linkClass }>Mini interjúk</Link></li>
+                        <li className="mh3 tc"><Link to="/archives/programok/" className={ linkClass }>Programok</Link></li>
+                        <li className="mh3 tc"><Link to="/archives/gasztro/" className={ linkClass }>Gasztro</Link></li>
+                        <li className="mh3 tc"><Link to="/archives/kultura/" className={ linkClass }>Kultúra</Link></li>
+                        <li className="mh3 tc"><Link to="/archives/sport/" className={ linkClass }>Sport és szabadidő</Link></li>
+                    </ul>
+                    <h4 className="w3 flex justify-end light-gray"><a href="https://www.facebook.com/hellobudaors/" target="_blank" className="link dim"><Icon name="facebook" class="dark-gray" /></a></h4>
+
+                    {/* <div className="flex items-center flex-auto justify-between">
+                        
+                    </div> */}
                 </header>
             </>
         )
