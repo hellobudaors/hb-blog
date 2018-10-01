@@ -19,3 +19,51 @@
 .post-body a:hover {
     box-shadow: 0 1px 0px 0px #00AEED;
 }
+
+.post-body h1, h2, h3, h4, h5, h6, p, blockquote {
+    margin: 1.65rem 0 0;
+    line-height: 1.65em;
+}
+
+.post-body h1, h2, h3, h4, h5, h6 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 500;
+}
+
+.post-body h1 + p, 
+.post-body h2 + p, 
+.post-body h3 + p, 
+.post-body h4 + p, 
+.post-body h5 + p, 
+.post-body h6 + p {
+    margin: 1.0rem 0 0;
+}
+
+.post-body p + h1, 
+.post-body p + h2, 
+.post-body p + h3, 
+.post-body p + h4, 
+.post-body p + h5, 
+.post-body p + h6 {
+    margin: 3.2rem 0 0;
+}
+
+.post-body h2 {
+    font-size: 3.0rem;
+}
+
+.post-body h3 {
+    font-size: 2.25rem;
+}
+
+.post-body h4 {
+    font-size: 1.5rem;
+}
+
+.post-body h5 {
+    font-size: 1.25rem;
+}
+
+.post-body h6 {
+    font-size: 1.0rem;
+}
