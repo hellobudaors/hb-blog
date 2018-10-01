@@ -20,7 +20,7 @@ class Footer extends React.Component {
                                 <li className="ml3"><a href="mailto:hellobudaors.blog@gmail.com" className={ linkClass }>Írj nekünk</a></li>
                             </ul>
                         </div>
-                        <div className="col-6">
+                        <div className="col-12 col-6-ns">
                             <p className="pa0 ma0 lh-copy f6 f5-ns">
                                 Helló Budaörs! Ismerjük meg városunkat együtt! <br /> Célunk, hogy a helyi kulturális, gasztronómiai vagy ismeretterjesztő lehetőségeket, látnivalókat, felnőtt- és gyermekprogramokat egy felületre gyűjtsük, közösséget teremtsünk.
                             </p>
