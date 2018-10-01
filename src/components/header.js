@@ -13,9 +13,9 @@ class Header extends React.Component {
             <>
                 <header className={ Styles.page.xl + Styles.sideSpacing + `flex flex-wrap-ns justify-between items-center mt4` }>
 
-                    <Link to="/" className="db link dim order-1 order-2-l mb4 mb0-l"><Icon name="home" class="dark-gray" /></Link>
+                    <Link to="/" className="dn db-ns link dim order-1 order-2-l mb4 mb0-l"><Icon name="home" class="dark-gray" /></Link>
 
-                    <Link to="/" className="ttu item-stretch flex justify-center order-2 w-90 order-1-l w-100-l mb4 ph3"><img src={ Logo } /></Link>
+                    <Link to="/" className="ttu item-stretch flex justify-center order-2 w-90 order-1-l w-100-l mb4 ph3-ns pr4"><img src={ Logo } /></Link>
 
                     <a href="https://www.facebook.com/hellobudaors/" target="_blank" className="db light-gray order-3 order-4-l link dim mb4 mb0-l item-end"><Icon name="facebook" class="dark-gray" /></a>
 

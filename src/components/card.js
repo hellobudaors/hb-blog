@@ -16,9 +16,9 @@ class Card extends React.Component {
                 card = 
                     <Link to={ `/posts/${node.slugs[0]}` } className="col-12 db no-underline flex items-stretch white">
                         <div className={ Styles.gutter + `grid-12 w-100` }>
-                            <div className="col-4-l col-6-m col-12 pa4 flex flex-column justify-between bg-dark-gray bt bw3 b--gold">
-                                <h2 key={ node.id } className="pa0 ma0 lh-title barlow f2 f1-l word-wrap">{ node.data.title.text }</h2>
-                                <p className="pa0 ma0 mt4 lh-copy flex-auto f4 word-wrap">{ node.data.excerpt.text }</p>
+                            <div className="col-4-l col-6-m col-12 pa3 pa4-ns flex flex-column justify-between bg-dark-gray bt bw3 b--gold">
+                                <h2 key={ node.id } className="pa0 ma0 lh-title barlow f3 f2-ns f1-l word-wrap">{ node.data.title.text }</h2>
+                                <p className="pa0 ma0 mt4 lh-copy flex-auto f5 f4-ns word-wrap">{ node.data.excerpt.text }</p>
                                 <p className="pa0 ma0 self-end mt4"><Icon name="arrow-right" class="white" /></p>
                             </div>
                             <div className="col-8-l col-6-m col-12 nl4-m nl4-l bt bw3 b--gold home-default-bg dn db-m db-l" style={{
@@ -43,8 +43,8 @@ class Card extends React.Component {
 
                     card =
                         <Link to={ `/posts/${node.slugs[0]}` } className={ colSpan + `pa4 db no-underline grow flex flex-column white bg-dark-gray` } style={ cardStyle }>
-                            <h2 key={ node.id } className="pa0 ma0 lh-title barlow f2 word-wrap">{ node.data.title.text }</h2>
-                            <p className="pa0 ma0 mt3 mb4 lh-copy flex-auto overflow-hidden sans-serif f4 word-wrap white-80 measure" style={{
+                            <h2 key={ node.id } className="pa0 ma0 lh-title barlow f3 f2-ns word-wrap">{ node.data.title.text }</h2>
+                            <p className="pa0 ma0 mt3 mb4 lh-copy flex-auto overflow-hidden sans-serif f5 f4-ns word-wrap white-80 measure" style={{
                                 lineHeight: `1.65`
                             }}>{ node.data.excerpt.text }</p>
                             <p className="pa0 ma0 self-end"><Icon name="arrow-right" class="white" /></p>
@@ -58,7 +58,7 @@ class Card extends React.Component {
                     
                     card =
                         <Link to={ `/posts/${node.slugs[0]}` } className={ colSpan + `pa4 db no-underline grow flex flex-column white bg-dark-gray justify-between` } style={ cardStyle }>
-                            <h2 key={ node.id } className="pa0 ma0 lh-title barlow-condensed f2 word-wrap">{ node.data.title.text }</h2>
+                            <h2 key={ node.id } className="pa0 ma0 lh-title barlow-condensed f3 f2-ns word-wrap">{ node.data.title.text }</h2>
                             <p className="pa0 ma0 self-end"><Icon name="arrow-right" class="white" /></p>
                         </Link>
                 } else if (node.data.post_type === `Piros` || node.data.post_type === `Sárga` || node.data.post_type === `Zöld`) {
@@ -86,8 +86,8 @@ class Card extends React.Component {
 
                     card =
                         <Link to={ `/posts/${node.slugs[0]}` } className={ cardClass + colSpan + `pa4 db no-underline grow flex flex-column white` }>
-                        <h2 key={ node.id } className={ textColor + `pa0 ma0 lh-title barlow f3 f2-l word-wrap` }>{ node.data.title.text }</h2>
-                        <p className={ textColor + `pa0 ma0 mt3 mb4 lh-copy flex-auto overflow-hidden sans-serif f5 f4-l word-wrap white-80 measure` } style={ {
+                        <h2 key={ node.id } className={ textColor + `pa0 ma0 lh-title barlow f4 f3-ns f2-l word-wrap` }>{ node.data.title.text }</h2>
+                        <p className={ textColor + `pa0 ma0 mt3 mb4 lh-copy flex-auto overflow-hidden sans-serif f5 f4-ns word-wrap white-80 measure` } style={ {
                                 lineHeight: `1.65`
                             } }>{ node.data.excerpt.text }</p>
                             <p className="pa0 ma0 self-end"><Icon name="arrow-right" class={ secondaryColor } /></p>
@@ -103,7 +103,7 @@ class Card extends React.Component {
                                     backgroundSize: `cover`,
                                 }}></div>
                                 <h2 key={ node.id } className="pa0 ma0 mt3 lh-title barlow-condensed f3 f2-l word-wrap measure">{ node.data.title.text }</h2>
-                                <p className="pa0 ma0 mt3 lh-copy overflow-hidden sans-serif dark-gray f4 f5-l word-wrap measure flex-auto">{ node.data.excerpt.text }</p>
+                                <p className="pa0 ma0 mt3 lh-copy overflow-hidden sans-serif dark-gray f5 f4-ns word-wrap measure flex-auto">{ node.data.excerpt.text }</p>
                             </Link>
                     } else {
                         card =

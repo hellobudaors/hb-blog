@@ -16,14 +16,14 @@ class PostTitle extends React.Component {
                     minHeight: `560px`,
                 } } className="flex flex-column justify-end">
                     <div className={ Styles.page.m + Styles.sideSpacing + `w-100`}>
-                        <h1 className="f-subheadline white ma0 pa4 bg-black-70 nl4 pr6 dib lh-title barlow-condensed">{ title }</h1>
+                        <h1 className="f1 f-subheadline-ns white ma0 pa4 bg-black-70 nl4 pr3 pr4-ns dib lh-title barlow-condensed">{ title }</h1>
                     </div>
                 </div>
             )
         } else {
             return (
                 <div className={ Styles.page.m + Styles.sideSpacing }>
-                    <h1 className="f-subheadline lh-title barlow-condensed">{ title }</h1>
+                    <h1 className="f1 f-subheadline-ns lh-title barlow-condensed">{ title }</h1>
                 </div>
             )
         }
