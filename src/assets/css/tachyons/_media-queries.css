@@ -32,5 +32,5 @@
 
 /* Media Queries */
 @custom-media --breakpoint-not-small screen and (min-width: 40em);
-@custom-media --breakpoint-medium screen and (min-width: 40em) and (max-width: 64em);
-@custom-media --breakpoint-large screen and (min-width: 64em);
+@custom-media --breakpoint-medium screen and (min-width: 40em) and (max-width: 65em);
+@custom-media --breakpoint-large screen and (min-width: 65em);

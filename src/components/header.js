@@ -12,12 +12,16 @@ class Header extends React.Component {
         return (
             <>
                 <header className={ Styles.page.xl + Styles.sideSpacing + `flex flex-wrap justify-between items-center mt4` }>
-                    <h4 className="ttu flex-auto flex justify-center w-100-l order-2 order-1-l">
-                        <Link to="/"><img src={ Logo } /></Link>
-                    </h4>
 
-                    <h4 className="order-1 order-2-l"><Link to="/" className="link dim"><Icon name="home" class="dark-gray" /></Link></h4>
-                    <ul className="flex list pa0 ma0 justify-center items-center f6 f5-ns order-4 order-3-l flex-auto">
+                    <Link to="/" className="db link dim order-1 order-2-l mb4 mb0-l"><Icon name="home" class="dark-gray" /></Link>
+
+                    <div className="ttu flex-auto flex justify-center order-2 w-90 order-1-l w-100-l mb4">
+                        <Link to="/"><img src={ Logo } /></Link>
+                    </div>
+
+                    <a href="https://www.facebook.com/hellobudaors/" target="_blank" className="db light-gray order-3 order-4-l link dim mb4 mb0-l item-end"><Icon name="facebook" class="dark-gray" /></a>
+
+                    <ul className="flex list pa0 ma0 justify-center items-center f6 f5-l order-4 order-3-l flex-auto w-100 w-90-l">
                         <li className="mh3 tc"><Link to="/" className={ linkClass }>Hello</Link></li>
                         <li className="mh3 tc"><Link to="/archives/mini-interjuk/" className={ linkClass }>Mini interjúk</Link></li>
                         <li className="mh3 tc"><Link to="/archives/programok/" className={ linkClass }>Programok</Link></li>
@@ -25,7 +29,6 @@ class Header extends React.Component {
                         <li className="mh3 tc"><Link to="/archives/kultura/" className={ linkClass }>Kultúra</Link></li>
                         <li className="mh3 tc"><Link to="/archives/sport/" className={ linkClass }>Sport és szabadidő</Link></li>
                     </ul>
-                    <h4 className="flex justify-end light-gray order-3 order-4-l"><a href="https://www.facebook.com/hellobudaors/" target="_blank" className="link dim"><Icon name="facebook" class="dark-gray" /></a></h4>
 
                     {/* <div className="flex items-center flex-auto justify-between">
                         
