@@ -1,7 +1,11 @@
 require('dotenv').config()
+
 const cssNano = require(`cssnano`)
+const autoprefixer = require(`autoprefixer`)
+const easyImport = require(`postcss-easy-import`)
 const postcssCustomMedia = require('postcss-custom-media')
 const postcssColorMod = require('postcss-color-mod-function')
+const cssVariables = require('postcss-css-variables')
 
 module.exports = {
     siteMetadata: {
@@ -61,9 +65,12 @@ module.exports = {
             resolve: `gatsby-plugin-postcss`,
             options: {
                 postCssPlugins: [
+                    autoprefixer({ browsers: [`last 2 versions`] }),
+                    easyImport(),
+                    cssVariables(),
+                    postcssColorMod(),
                     postcssCustomMedia(),
-                    postcssColorMod()
-                    // cssNano({ preset: `default`, })
+                    cssNano({zindex: false}),
                 ],
             },
         },
