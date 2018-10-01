@@ -62,8 +62,8 @@ module.exports = {
             options: {
                 postCssPlugins: [
                     postcssCustomMedia(),
-                    postcssColorMod(),
-                    cssNano({ preset: `default`, })
+                    postcssColorMod()
+                    // cssNano({ preset: `default`, })
                 ],
             },
         },
