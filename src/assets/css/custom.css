@@ -6,6 +6,10 @@
 }
 
 /* Post body */
+.post-body {
+    word-break: break-word;
+}
+
 .post-body .block-img {
     margin: 0 -120px;
 }
