@@ -24,11 +24,11 @@ class PostList extends React.Component {
                         gridTemplateRows = `minmax(460px, auto)`
                     }
                     if (((i + 1) % 5 == 0 && (i + 1) % 10 != 0) || i % 10 == 0) {
-                        colSpan = `col-12 col-8-l`
+                        colSpan = `col-12 col-6-m col-8-l`
                     }
                 } else {
                     if (i == 0 || (i % 5 == 1 && i % 10 != 1) || i % 10 == 0) {
-                        colSpan = `col-12 col-8-l`
+                        colSpan = `col-12 col-6-m col-8-l`
                     }
                 }
 
