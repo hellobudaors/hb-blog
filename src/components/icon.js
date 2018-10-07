@@ -11,6 +11,7 @@ class Icon extends React.Component {
             width: iconProps.width,
             height: iconProps.height,
             class: iconProps.class,
+            'stroke-width': iconProps.strokeWidth,
         }
 
         return (
@@ -20,6 +21,8 @@ class Icon extends React.Component {
                         width: (iconProps.width ? attrs.height : null),
                         height: (iconProps.height ? attrs.height : null)
                     }}
+
+                    className={ iconProps.containerClass }
 
                     dangerouslySetInnerHTML={{
                         __html: feather.icons[iconProps.name].toSvg(attrs),
@@ -35,6 +38,8 @@ Icon.defaultProps = {
     height: `24px`,
     color: `black`,
     class: ``,
+    containerClass: ``,
+    strokeWidth: 2,
 }
 
 Icon.propTypes = {
@@ -43,6 +48,8 @@ Icon.propTypes = {
     height: PropTypes.string,
     color: PropTypes.string,
     class: PropTypes.string,
+    containerClass: PropTypes.string,
+    strokeWidth: PropTypes.number,
 }
 
 export default Icon

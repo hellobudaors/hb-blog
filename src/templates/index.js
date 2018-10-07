@@ -9,11 +9,17 @@ import Icon from '../components/icon';
 const NavLink = props => {
     if (!props.test) {
 
-        if (props.icon === `chevron-left`) {
-            return <Link to={ props.url } className="flex items-center pa4 bg-gold link dark-gray"><Icon name={ props.icon } width="40px" height="40px" class="dark-gray nl2" /> <span className="dib">{ props.text }</span></Link>;
+        var textClass = `dn dib-l fw5`, iconClass = ``
+
+        if (props.icon === `arrow-left`) {
+            textClass += ` order-2`
+            iconClass += ` order-1 nl2-l`
         } else {
-            return <Link to={ props.url } className="flex items-center pa4 bg-gold link dark-gray"><span className="dib">{ props.text }</span> <Icon name={ props.icon } width="40px" height="40px" class="dark-gray nr2" /></Link>;
+            textClass += ` order-1`
+            iconClass += ` order-2 nr2-l`
         }
+
+        return <Link to={ props.url } className="flex items-center pa4 bg-gold link dark-gray"><span className={ textClass }>{ props.text }</span> <Icon name={ props.icon } width="32px" height="32px" containerClass={ iconClass } class="dark-gray" /></Link>;
 
     } else {
         return <></>;
@@ -42,10 +48,10 @@ const IndexPage = ({ data, pathContext }) => {
 
             <div className={ Styles.page.xl + Styles.sideSpacing + `flex justify-between mt5`}>
                 <div className="previousLink">
-                    <NavLink test={ first } url={ previousUrl } text="Frissebb bejegyzések" icon="chevron-left" />
+                    <NavLink test={ first } url={ previousUrl } text="Frissebb bejegyzések" icon="arrow-left" />
                 </div>
                 <div className="nextLink">
-                    <NavLink test={ last } url={ nextUrl } text="Korábbi bejegyzések" icon="chevron-right" />
+                    <NavLink test={ last } url={ nextUrl } text="Korábbi bejegyzések" icon="arrow-right" />
                 </div>
             </div>
         </Layout>
