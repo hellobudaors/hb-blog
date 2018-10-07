@@ -53,36 +53,3 @@ const IndexPage = ({ data, pathContext }) => {
 };
 
 export default IndexPage;
-
-// export default ({ data, pathContext }) => (
-//     <Layout>
-//         <PostList page="index">{ data }</PostList>
-//     </Layout>
-// )
-
-export const query = graphql`
-{
-  allPrismicBlogPost(sort: { fields: [first_publication_date], order: DESC}) {
-    edges {
-      node {
-        id
-        slugs
-        data {
-          title {
-            text
-          }
-          post_type
-          excerpt {
-            text
-          }
-          feature_image {
-            alt
-            copyright
-            url
-          }
-        }
-      }
-    }
-  }
-}
-`
