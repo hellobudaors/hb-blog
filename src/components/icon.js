@@ -15,8 +15,14 @@ class Icon extends React.Component {
 
         return (
             <>
-                <span dangerouslySetInnerHTML={{
-                    __html: feather.icons[iconProps.name].toSvg(attrs),
+                <span 
+                    style={{
+                        width: (iconProps.width ? attrs.height : null),
+                        height: (iconProps.height ? attrs.height : null)
+                    }}
+
+                    dangerouslySetInnerHTML={{
+                        __html: feather.icons[iconProps.name].toSvg(attrs),
                 }} />
             </>
         )
