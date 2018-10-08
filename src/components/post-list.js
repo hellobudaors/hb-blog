@@ -11,7 +11,7 @@ class PostList extends React.Component {
         if (data.allPrismicBlogPost) {
 
             var cards = []
-            var gridTemplateRows = `480px`
+            const gridTemplateRows = `minmax(460px, auto)`
 
             for (let i = 0; i < data.allPrismicBlogPost.edges.length; i++) {
                 const element = data.allPrismicBlogPost.edges[i].node
@@ -21,7 +21,6 @@ class PostList extends React.Component {
                 if (this.props.page === `index`) {
                     if (i == 0) {
                         cardType = `first-on-index`
-                        gridTemplateRows = `minmax(460px, auto)`
                     }
                     if (((i + 1) % 5 == 0 && (i + 1) % 10 != 0) || i % 10 == 0) {
                         colSpan = `col-12 col-6-m col-8-l`
@@ -44,7 +43,7 @@ class PostList extends React.Component {
             return (
                 <div className={ Styles.page.xl + Styles.sideSpacing + Styles.gutter + `mt1 mt4-ns grid-12` } style={ {
                     gridTemplateRows: gridTemplateRows,
-                    gridAutoRows: `480px`,
+                    // gridAutoRows: `minmax(480px, 520px)`,
                 } }>
                     { cards }
                 </div>
