@@ -4,6 +4,38 @@ const createPaginatedPages = require("gatsby-paginate")
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions
 
+    const loadGhostPosts = new Promise((resolve, reject) => {
+        graphql(`
+        {
+            allGhostPost {
+                edges {
+                    node {
+                        id
+                        slug
+                        title
+                        custom_excerpt
+                    }
+                }
+            }
+        }
+        `).then((result) => {
+                result.data.allGhostPost.edges.forEach(({ node }) => {
+                    createPage({
+                        path: `/ghost-posts/${slug}`,
+                        component: path.resolve(`./src/templates/ghost-posts.js`),
+                        context: {
+                            id: node.id,
+                            slug: node.slug,
+                            tag: node.data.tag,
+                        },
+                    })
+                })
+                resolve()
+            }).catch(() => {
+                resolve()
+            })
+    })
+
     const loadHomePosts = new Promise((resolve, reject) => {
         graphql(`
         {
@@ -76,23 +108,23 @@ exports.createPages = async ({ graphql, actions }) => {
             }
         }
         `).then((result) => {
-                result.data.allPrismicTag.edges.forEach(({ node }) => {
-                    const slug = node.slugs[0]
-                    
-                    createPage({
-                        path: `/archives/${slug}`,
-                        component: path.resolve(`./src/templates/archive.js`),
-                        context: {
-                            id: node.prismicId,
-                            slug: slug,
-                            tag: node.data.tag,
-                        },
-                    })
+            result.data.allPrismicTag.edges.forEach(({ node }) => {
+                const slug = node.slugs[0]
+                
+                createPage({
+                    path: `/archives/${slug}`,
+                    component: path.resolve(`./src/templates/archive.js`),
+                    context: {
+                        id: node.prismicId,
+                        slug: slug,
+                        tag: node.data.tag,
+                    },
                 })
-                resolve()
-            }).catch(() => {
-                resolve()
             })
+            resolve()
+        }).catch(() => {
+            resolve()
+        })
     })
 
     return Promise.all([loadHomePosts, generateArchives])

@@ -12,6 +12,16 @@ module.exports = {
         title: 'Gatsby Starter Blog',
     },
     plugins: [
+
+        {
+            resolve: `gatsby-source-ghost`,
+            options: {
+                apiUrl: `https://zimos-mess.ghost.io`,
+                clientId: `ghost-frontend`,
+                clientSecret: `f66183ea53ea`
+            }
+        },
+
         /*
         * Gatsby's data processing layer begins with “source”
         * plugins. Here the site sources its data from prismic.io.
