@@ -1,5 +1,8 @@
 import React from "react"
 import Layout from '../components/layout'
+import {graphql} from "gatsby"
+
+const netlifyIdentity = require(`netlify-identity-widget`)
 
 class GhostPosts extends React.Component {
 
@@ -12,11 +15,11 @@ class GhostPosts extends React.Component {
     }
 
     getPosts() {
-        // return netlifyIdentity.currentUser() != null
-        //     ? this.props.data.allGhostPost.edges
-        //     : this.props.data.allGhostPost.edges
-        //         .filter(x => !x.node.featured)
-        return this.props.data.allGhostPost.edges
+        return netlifyIdentity.currentUser() != null
+            ? this.props.data.allGhostPost.edges
+            : this.props.data.allGhostPost.edges
+                .filter(x => !x.node.featured)
+        // return this.props.data.allGhostPost.edges
     }
 
     
@@ -25,6 +28,8 @@ class GhostPosts extends React.Component {
     }
     
     componentDidMount() {
+        netlifyIdentity.on(`login`, user => this.updatePosts())
+        netlifyIdentity.on(`logout`, () => this.updatePosts())
         this.updatePosts()
     }
 
