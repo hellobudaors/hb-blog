@@ -5,7 +5,14 @@ import { Styles } from './styles'
 import feather from 'feather-icons'
 import Icon from './icon';
 
+const netlifyIdentity = require(`netlify-identity-widget`)
+
+
 class Header extends React.Component {
+    componentDidMount() {
+        netlifyIdentity.init()
+    }
+
     render() {
         const linkClass = `barlow ttu link dark-gray dim tracked`
 
