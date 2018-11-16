@@ -40,7 +40,7 @@ class GhostPosts extends React.Component {
                     <div className="inner">
                         <div className="post-feed">
                             { this.state.posts.map(({ node }) =>
-                                <div key={node.id}>{ node.id }</div>
+                                <div key={node.id}>{ node.title }</div>
                             ) }
                         </div>
                     </div>

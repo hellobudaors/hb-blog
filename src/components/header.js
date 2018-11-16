@@ -34,7 +34,7 @@ class Header extends React.Component {
                         <li className="mh3 tc"><Link to="/archives/kultura/" className={ linkClass }>Kultúra</Link></li>
                         <li className="mh3 tc"><Link to="/archives/sport/" className={ linkClass }>Sport és szabadidő</Link></li>
                         {/* <li><div data-netlify-identity-menu></div></li> */}
-                        <li><div data-netlify-identity-button>Login with Netlify Identity</div></li>
+                        <li className="mk3 tc"><div data-netlify-identity-button className={ linkClass }></div></li>
                     </ul>
                 </header>
             </>
