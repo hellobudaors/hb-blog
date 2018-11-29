@@ -107,7 +107,7 @@ class Card extends React.Component {
                             <Link to={ `/posts/${node.slug}` } className={ colSpan + `pa4 db no-underline grow flex flex-column bt b--dark-gray bw2 dark-gray bg-near-white` }>
                                 <div className="h5 nl4 nt4 nr4" style={ {
                                     background: `url(${node.feature_image})`,
-                                backgroundPosition: `center ${featureImagePosition}`,
+                                    backgroundPosition: `center ${featureImagePosition}`,
                                     backgroundSize: `cover`,
                                 } }></div>
                                 <h2 key={ node.id } className="pa0 ma0 mt3 lh-title barlow-condensed f3 f2-l word-wrap measure">{ node.title }</h2>
