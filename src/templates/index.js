@@ -29,8 +29,8 @@ const NavLink = props => {
 const IndexPage = ({ data, pageContext }) => {
     const { group, index, first, last, pageCount } = pageContext
     
-    const previousUrl = `ghost-index/` + (index - 1 == 1 ? "" : (index - 1).toString())
-    const nextUrl = `ghost-index/` + ((index + 1).toString())
+    const previousUrl = index - 1 == 1 ? "" : (index - 1).toString()
+    const nextUrl = (index + 1).toString()
 
     const formattedData = {
         allGhostPost: {

@@ -7,7 +7,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const loadGhostPosts = new Promise((resolve, reject) => {
         graphql(`
         {
-            allGhostPost {
+            allGhostPost(sort: { fields: [published_at], order: DESC}) {
                 edges {
                     node {
                         id
@@ -47,41 +47,36 @@ exports.createPages = async ({ graphql, actions }) => {
             })
     })
 
-    // const generateArchives = new Promise((resolve, reject) => {
-    //     graphql(`
-    //     {
-    //         allPrismicTag {
-    //             edges {
-    //                 node {
-    //                     id
-    //                     prismicId
-    //                     slugs
-    //                     data {
-    //                         tag
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     }
-    //     `).then((result) => {
-    //         result.data.allPrismicTag.edges.forEach(({ node }) => {
-    //             const slug = node.slugs[0]
-                
-    //             createPage({
-    //                 path: `/archives/${slug}`,
-    //                 component: path.resolve(`./src/templates/archive.js`),
-    //                 context: {
-    //                     id: node.prismicId,
-    //                     slug: slug,
-    //                     tag: node.data.tag,
-    //                 },
-    //             })
-    //         })
-    //         resolve()
-    //     }).catch(() => {
-    //         resolve()
-    //     })
-    // })
+    const generateArchives = new Promise((resolve, reject) => {
+        graphql(`
+        {
+            allGhostTag {
+                edges {
+                    node {
+                        id
+                        slug
+                        name
+                    }
+                }
+            }
+        }
+        `).then((result) => {
+            result.data.allGhostTag.edges.forEach(({ node }) => {
+                createPage({
+                    path: `/archives/${node.slug}`,
+                    component: path.resolve(`./src/templates/archive.js`),
+                    context: {
+                        id: node.id,
+                        slug: node.slug,
+                        tag: node.name,
+                    },
+                })
+            })
+            resolve()
+        }).catch(() => {
+            resolve()
+        })
+    })
 
-    return Promise.all([loadGhostPosts])
+    return Promise.all([loadGhostPosts, generateArchives])
 }
