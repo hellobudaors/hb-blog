@@ -8,8 +8,6 @@ class Archive extends React.Component {
     render() {
         const data = this.props.data
 
-        console.log(`data: ` + JSON.stringify(data))
-
         return (
             <Layout>
                 <div className={ Styles.page.xl + Styles.sideSpacing}>
@@ -32,10 +30,11 @@ query($slug: String!) {
                 id
                 title
                 slug
-                html
                 custom_excerpt
                 feature_image
-                tags
+                tags {
+                    slug
+                }
             }
         }
     }

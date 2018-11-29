@@ -20,6 +20,9 @@ query($id: String!) {
         title
         html
         feature_image
+        tags {
+            slug
+        }
     }
 }
 `

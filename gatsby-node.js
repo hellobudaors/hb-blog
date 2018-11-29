@@ -15,6 +15,9 @@ exports.createPages = async ({ graphql, actions }) => {
                         title
                         custom_excerpt
                         feature_image
+                        tags {
+                            slug
+                        }
                     }
                 }
             }
