@@ -5,12 +5,13 @@ import { Styles } from './styles'
 import feather from 'feather-icons'
 import Icon from './icon';
 
+// const MembersScript = require('../assets/js/ghost-members.dropin')
 const netlifyIdentity = require(`netlify-identity-widget`)
-
 
 class Header extends React.Component {
     componentDidMount() {
-        netlifyIdentity.init()
+        // netlifyIdentity.init()
+        // MembersScript.init()
     }
 
     render() {
@@ -33,8 +34,6 @@ class Header extends React.Component {
                         <li className="mh3 tc"><Link to="/archives/gasztro/" className={ linkClass }>Gasztro</Link></li>
                         <li className="mh3 tc"><Link to="/archives/kultura/" className={ linkClass }>Kultúra</Link></li>
                         <li className="mh3 tc"><Link to="/archives/sport/" className={ linkClass }>Sport és szabadidő</Link></li>
-                        {/* <li><div data-netlify-identity-menu></div></li> */}
-                        <li className="mk3 tc"><div data-netlify-identity-button className={ linkClass }></div></li>
                     </ul>
                 </header>
             </>

@@ -1,23 +1,23 @@
 import React from 'react'
-import { Styles } from './styles'
-import Card from './card'
+import { Styles } from '../components/styles'
+import Card from '../components/card'
 import PropTypes from 'prop-types'
-import Icon from './icon'
+import Icon from '../components/icon'
 
 class PostList extends React.Component {
     render() {
         const data = this.props.children
 
-        if (data.allGhostPost) {
+        if (data.allPrismicBlogPost) {
 
             var cards = []
             const gridTemplateRows = `minmax(460px, auto)`
 
-            for (let i = 0; i < data.allGhostPost.edges.length; i++) {
-                const element = data.allGhostPost.edges[i].node
+            for (let i = 0; i < data.allPrismicBlogPost.edges.length; i++) {
+                const element = data.allPrismicBlogPost.edges[i].node
                 var cardType = ``
                 var colSpan = `col-4-l col-6-m col-12`
-
+                
                 if (this.props.page === `index`) {
                     if (i == 0) {
                         cardType = `first-on-index`
@@ -36,6 +36,10 @@ class PostList extends React.Component {
                 )
             }
 
+            // cards = data.allPrismicBlogPost.edges.map(({ node }) => (
+            //     <Card key={ node.id } cardType={ node.data.featured }>{ node }</Card>
+            // ))
+
             return (
                 <div className={ Styles.page.xl + Styles.sideSpacing + Styles.gutter + `mt1 mt4-ns grid-12` } style={ {
                     gridTemplateRows: gridTemplateRows,
@@ -48,7 +52,7 @@ class PostList extends React.Component {
             return (
                 <div className={ Styles.page.xl + Styles.sideSpacing + `mt6 mb7` }>
                     <p className="flex flex-column items-center fw7 dark-gray">
-                        <Icon name="gift" class="mb2 mr2 dark-gray" width="48" height="48" />
+                    <Icon name="gift" class="mb2 mr2 dark-gray" width="48" height="48" />
                         Hamarosan...
                     </p>
                 </div>

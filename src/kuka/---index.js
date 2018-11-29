@@ -27,22 +27,26 @@ const NavLink = props => {
 };
 
 const IndexPage = ({ data, pageContext }) => {
-    const { group, index, first, last, pageCount } = pageContext
-    
-    const previousUrl = `ghost-index/` + (index - 1 == 1 ? "" : (index - 1).toString())
-    const nextUrl = `ghost-index/` + ((index + 1).toString())
+    const { group, index, first, last, pageCount } = pageContext;
+    const previousUrl = index - 1 == 1 ? "" : (index - 1).toString();
+    const nextUrl = (index + 1).toString();
+
+    // console.log(JSON.stringify(group))
+    // console.log(JSON.stringify(data))
 
     const formattedData = {
-        allGhostPost: {
+        allPrismicBlogPost: {
             edges: group
         }
     }
+
+    // console.log(JSON.stringify(formattedData))
 
     return (
         <Layout>
             <PostList page="index">{ formattedData }</PostList>
 
-            <div className={ Styles.page.xl + Styles.sideSpacing + `flex justify-between mt5` }>
+            <div className={ Styles.page.xl + Styles.sideSpacing + `flex justify-between mt5`}>
                 <div className="previousLink">
                     <NavLink test={ first } url={ previousUrl } text="Frissebb bejegyzések" icon="arrow-left" />
                 </div>

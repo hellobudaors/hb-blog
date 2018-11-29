@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import Post from "../components/post"
 
 export default ({ data }) => {
-    const post = data.prismicBlogPost.data    
+    const post = data.ghostPost    
 
     return (
         <Layout>
@@ -15,24 +15,11 @@ export default ({ data }) => {
 
 export const query = graphql`
 query($id: String!) {
-    prismicBlogPost(id: {eq: $id}) {
-        data {
-            title {
-                text
-            }
-            feature_image {
-                alt
-                copyright
-                url
-            }
-            excerpt {
-                html
-                text
-            }
-            post_body {
-                html
-            }      
-        }
+    ghostPost(id: {eq: $id}) {
+        id
+        title
+        html
+        feature_image
     }
 }
 `
