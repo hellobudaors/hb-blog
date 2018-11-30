@@ -25,7 +25,7 @@ class Header extends React.Component {
                         <li className="mh3 tc"><Link to="/archives/programok/" className={ linkClass }>Programok</Link></li>
                         <li className="mh3 tc"><Link to="/archives/gasztro/" className={ linkClass }>Gasztro</Link></li>
                         <li className="mh3 tc"><Link to="/archives/kultura/" className={ linkClass }>Kultúra</Link></li>
-                        {/* <li className="mh3 tc"><Link to="/archives/budaors-kepekben/" className={ linkClass }>Budaörs képekben</Link></li> */}
+                        <li className="mh3 tc"><Link to="/archives/budaors-kepekben/" className={ linkClass }>Budaörs képekben</Link></li>
                     </ul>
                 </header>
             </>

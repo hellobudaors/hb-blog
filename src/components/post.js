@@ -22,7 +22,8 @@ class Post extends React.Component {
         tags.forEach(tag => {
             if (tag.slug === `hash-kep-felul`) {
                 featureImagePosition = `top`
-            } else if (tag.slug === `hash-kep-alul`) {
+            } 
+            if (tag.slug === `hash-kep-alul`) {
                 featureImagePosition = 'bottom'
             }
         })
