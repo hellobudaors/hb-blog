@@ -40,7 +40,7 @@ class Post extends React.Component {
                 <div className={ Styles.page.m + Styles.sideSpacing + `post-container mt5 pb4` }>
                     <h2 className="f2 bw3 bt b--gold">Beszélgetés</h2>
                     <div class="fb-comments" data-href={ `https://hellobudaors.com/` + slug } data-width="736" data-numposts="5"></div>
-                    <div dangerouslySetInnerHTML={ {
+                    {/* <div dangerouslySetInnerHTML={ {
                         __html: `
                         <div id="fb-root"></div>
                         <script>(function(d, s, id) {
@@ -51,7 +51,7 @@ class Post extends React.Component {
                         fjs.parentNode.insertBefore(js, fjs);
                         }(document, 'script', 'facebook-jssdk'));</script>
                     `
-                    } } />
+                    } } /> */}
                 </div>
 
                 {/* <div className={ Styles.page.m + Styles.sideSpacing + `post-container mt5 pb4` }>
