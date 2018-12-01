@@ -35,27 +35,33 @@ class Post extends React.Component {
                 <div className={ Styles.page.m + Styles.sideSpacing + `post-container mt4 pb4` }>
                     <div className="lh-copy serif f4">{ body }</div>
                 </div>
-                <div className={ Styles.page.m + Styles.sideSpacing + `mt4 pb4` } dangerouslySetInnerHTML={ {
-                    __html: `
-                <div id="disqus_thread"></div>
+
+                <div className={ Styles.page.m + Styles.sideSpacing + `post-container mt5 pb4` }>
                 
-                <script>
+                    <h2 className="f2 bw3 bt b--gold">Beszélgetés</h2>
+                
+                    <div className="mt4 pb4" dangerouslySetInnerHTML={ {
+                            __html: `
+                        <div id="disqus_thread"></div>
+                        
+                        <script>
 
-                var disqus_config = function () {
-                    this.page.url = 'https://hellobudaors.com/` + slug + `';
-                    this.page.identifier = 'hellobudaors';
-                };
+                        var disqus_config = function () {
+                            this.page.url = 'https://hellobudaors.com/` + slug + `';
+                            this.page.identifier = 'hellobudaors';
+                        };
 
-                (function() { // DON'T EDIT BELOW THIS LINE
-                var d = document, s = d.createElement('script');
-                s.src = 'https://hellobudaors.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-                })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-            `
-                } } />
+                        (function() { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://hellobudaors.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                        })();
+                        </script>
+                        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                    `
+                        } } />
+                </div>
             </div>
         )
     }
