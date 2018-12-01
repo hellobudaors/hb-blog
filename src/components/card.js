@@ -66,13 +66,13 @@ class Card extends React.Component {
                     }
 
                     card =
-                        <Link to={ link } className={ colSpan + `pa4 db no-underline grow flex flex-column white bg-dark-gray` } style={ cardStyle }>
+                        <a href={ link } className={ colSpan + `pa4 db no-underline grow flex flex-column white bg-dark-gray` } style={ cardStyle }>
                             <h2 key={ node.id } className="pa0 ma0 lh-title barlow f3 f2-ns word-wrap">{ node.title }</h2>
                             <p className="pa0 ma0 mt3 mb4 lh-copy flex-auto overflow-hidden sans-serif f5 f4-ns word-wrap white-80 measure" style={ {
                                 lineHeight: `1.65`
                             } }>{ node.custom_excerpt }</p>
                             <p className="pa0 ma0 self-end"><Icon name="arrow-right" class="white" /></p>
-                        </Link>
+                        </a>
                 } else if (featuredStyle === `red` || featuredStyle === `yellow` || featuredStyle === `green`) {
 
                     var cardClass, textColor, secondaryColor
@@ -97,18 +97,18 @@ class Card extends React.Component {
                     }
 
                     card =
-                        <Link to={ link } className={ cardClass + colSpan + `pa4 db no-underline grow flex flex-column white` }>
+                        <a href={ link } className={ cardClass + colSpan + `pa4 db no-underline grow flex flex-column white` }>
                             <h2 key={ node.id } className={ textColor + `pa0 ma0 lh-title barlow f4 f3-ns f2-l word-wrap` }>{ node.title }</h2>
                             <p className={ textColor + `pa0 ma0 mt3 mb4 lh-copy flex-auto overflow-hidden sans-serif f5 f4-ns word-wrap white-80 measure` } style={ {
                                 lineHeight: `1.65`
                             } }>{ node.custom_excerpt }</p>
                             <p className="pa0 ma0 self-end"><Icon name="arrow-right" class={ secondaryColor } /></p>
-                        </Link>
+                        </a>
                 } else {
 
                     if (node.feature_image) {
                         card =
-                            <Link to={ link } className={ colSpan + `pa4 db no-underline grow flex flex-column bt b--dark-gray bw2 dark-gray bg-near-white` }>
+                            <a href={ link } className={ colSpan + `pa4 db no-underline grow flex flex-column bt b--dark-gray bw2 dark-gray bg-near-white` }>
                                 <div className="h5 nl4 nt4 nr4" style={ {
                                     background: `url(${node.feature_image})`,
                                     backgroundPosition: `center ${featureImagePosition}`,
@@ -116,14 +116,14 @@ class Card extends React.Component {
                                 } }></div>
                                 <h2 key={ node.id } className="pa0 ma0 mt3 lh-title barlow-condensed f3 f2-l word-wrap measure">{ node.title }</h2>
                                 <p className="pa0 ma0 mt3 lh-copy overflow-hidden sans-serif dark-gray f5 f4-ns word-wrap measure flex-auto">{ node.custom_excerpt }</p>
-                            </Link>
+                            </a>
                     } else {
                         card =
-                            <Link to={ link } className={ colSpan + `pa4 db no-underline grow flex flex-column bt b--dark-gray bw2 dark-gray bg-near-white` }>
+                            <a href={ link } className={ colSpan + `pa4 db no-underline grow flex flex-column bt b--dark-gray bw2 dark-gray bg-near-white` }>
                                 <h2 key={ node.id } className="pa0 ma0 lh-title barlow-condensed f3 f2-l word-wrap measure">{ node.title }</h2>
                                 <p className="pa0 ma0 mt3 lh-copy overflow-hidden sans-serif dark-gray f4 f5-l word-wrap measure">{ node.custom_excerpt }</p>
                                 <p className="pa0 ma0 self-end mt3"><Icon name="arrow-right" class="dark-gray" /></p>
-                            </Link>
+                            </a>
                     }
                 }
             }
