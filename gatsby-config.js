@@ -9,7 +9,10 @@ const cssVariables = require('postcss-css-variables')
 
 module.exports = {
     siteMetadata: {
-        title: 'Hello Budaörs',
+        title: `Hello Budaörs`,
+        facebook: {
+            appId: process.env.FB_APP_ID
+        },
     },
     plugins: [
 

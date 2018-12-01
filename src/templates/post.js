@@ -4,11 +4,12 @@ import Layout from "../components/layout"
 import Post from "../components/post"
 
 export default ({ data }) => {
-    const post = data.ghostPost    
+    const post = data.ghostPost,
+            meta = data.site
 
     return (
         <Layout>
-            <Post data={ post } html={ true } />
+            <Post data={ post } meta={ meta } html={ true } />
         </Layout>
     )
 }
@@ -23,6 +24,13 @@ query($id: String!) {
         feature_image
         tags {
             slug
+        }
+    }
+    site {
+        siteMetadata {
+            facebook {
+                appId
+            }
         }
     }
 }
