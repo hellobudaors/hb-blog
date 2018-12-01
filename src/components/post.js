@@ -33,7 +33,7 @@ class Post extends React.Component {
         })
 
         return (
-            <div className="pt4">
+            <div className="pt3">
 
                 <Helmet>
                 { (meta ?

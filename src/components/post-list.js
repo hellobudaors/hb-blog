@@ -37,7 +37,7 @@ class PostList extends React.Component {
             }
 
             return (
-                <div className={ Styles.page.xl + Styles.sideSpacing + Styles.gutter + `mt1 mt4-ns grid-12` } style={ {
+                <div className={ Styles.page.xl + Styles.sideSpacing + Styles.gutter + `mt3 grid-12` } style={ {
                     gridTemplateRows: gridTemplateRows,
                     // gridAutoRows: `minmax(480px, 520px)`,
                 } }>
