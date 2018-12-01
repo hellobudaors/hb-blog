@@ -10,7 +10,11 @@ class Card extends React.Component {
 
         if (node) {
             
-            var card, featureImagePosition = `center`, tags = node.tags, featuredStyle
+            var card, 
+                featureImagePosition = `center`, 
+                tags = node.tags, 
+                featuredStyle, 
+                link = `/posts/` + node.slug + `?no-cache=1`
 
             // Setting feature image position
             tags.forEach(tag => {
@@ -34,7 +38,7 @@ class Card extends React.Component {
             if (this.props.cardtype === `first-on-index`) {
                 // The very first post on index
                 card = 
-                    <Link to={ `/posts/${node.slug}` } className="col-12 db no-underline flex items-stretch white">
+                    <Link to={ link } className="col-12 db no-underline flex items-stretch white">
                         <div className={ Styles.gutter + `grid-12 w-100` }>
                             <div className="col-4-l col-6-m col-12 pa3 pa4-ns flex flex-column justify-between bg-dark-gray bt bw3 b--gold">
                                 <h2 key={ node.id } className="pa0 ma0 lh-title barlow f3 f2-ns f1-l word-wrap">{ node.title }</h2>
@@ -62,7 +66,7 @@ class Card extends React.Component {
                     }
 
                     card =
-                        <Link to={ `/posts/${node.slug}` } className={ colSpan + `pa4 db no-underline grow flex flex-column white bg-dark-gray` } style={ cardStyle }>
+                        <Link to={ link } className={ colSpan + `pa4 db no-underline grow flex flex-column white bg-dark-gray` } style={ cardStyle }>
                             <h2 key={ node.id } className="pa0 ma0 lh-title barlow f3 f2-ns word-wrap">{ node.title }</h2>
                             <p className="pa0 ma0 mt3 mb4 lh-copy flex-auto overflow-hidden sans-serif f5 f4-ns word-wrap white-80 measure" style={ {
                                 lineHeight: `1.65`
@@ -93,7 +97,7 @@ class Card extends React.Component {
                     }
 
                     card =
-                        <Link to={ `/posts/${node.slug}` } className={ cardClass + colSpan + `pa4 db no-underline grow flex flex-column white` }>
+                        <Link to={ link } className={ cardClass + colSpan + `pa4 db no-underline grow flex flex-column white` }>
                             <h2 key={ node.id } className={ textColor + `pa0 ma0 lh-title barlow f4 f3-ns f2-l word-wrap` }>{ node.title }</h2>
                             <p className={ textColor + `pa0 ma0 mt3 mb4 lh-copy flex-auto overflow-hidden sans-serif f5 f4-ns word-wrap white-80 measure` } style={ {
                                 lineHeight: `1.65`
@@ -104,7 +108,7 @@ class Card extends React.Component {
 
                     if (node.feature_image) {
                         card =
-                            <Link to={ `/posts/${node.slug}` } className={ colSpan + `pa4 db no-underline grow flex flex-column bt b--dark-gray bw2 dark-gray bg-near-white` }>
+                            <Link to={ link } className={ colSpan + `pa4 db no-underline grow flex flex-column bt b--dark-gray bw2 dark-gray bg-near-white` }>
                                 <div className="h5 nl4 nt4 nr4" style={ {
                                     background: `url(${node.feature_image})`,
                                     backgroundPosition: `center ${featureImagePosition}`,
@@ -115,36 +119,13 @@ class Card extends React.Component {
                             </Link>
                     } else {
                         card =
-                            <Link to={ `/posts/${node.slug}` } className={ colSpan + `pa4 db no-underline grow flex flex-column bt b--dark-gray bw2 dark-gray bg-near-white` }>
+                            <Link to={ link } className={ colSpan + `pa4 db no-underline grow flex flex-column bt b--dark-gray bw2 dark-gray bg-near-white` }>
                                 <h2 key={ node.id } className="pa0 ma0 lh-title barlow-condensed f3 f2-l word-wrap measure">{ node.title }</h2>
                                 <p className="pa0 ma0 mt3 lh-copy overflow-hidden sans-serif dark-gray f4 f5-l word-wrap measure">{ node.custom_excerpt }</p>
                                 <p className="pa0 ma0 self-end mt3"><Icon name="arrow-right" class="dark-gray" /></p>
                             </Link>
                     }
                 }
-
-                // var colSpan = this.props.colspan + ` `
-
-                // if (node.feature_image) {
-                //     card =
-                //         <Link to={ `/posts/${node.slug}` } className={ colSpan + `pa4 db no-underline grow flex flex-column bt b--dark-gray bw2 dark-gray bg-near-white` }>
-                //             <div className="h5 nl4 nt4 nr4" style={ {
-                //                 background: `url(${node.feature_image})`,
-                //                 backgroundPosition: `center ${featureImagePosition}`,
-                //                 backgroundSize: `cover`,
-                //             } }></div>
-                //             <h2 key={ node.id } className="pa0 ma0 mt3 lh-title barlow-condensed f3 f2-l word-wrap measure">{ node.title }</h2>
-                //             <p className="pa0 ma0 mt3 lh-copy overflow-hidden sans-serif dark-gray f5 f4-ns word-wrap measure flex-auto">{ node.custom_excerpt }</p>
-                //         </Link>
-                // } else {
-
-                // card =
-                //     <Link to={ `/posts/${node.slugs}` } className={ colSpan + `pa4 db no-underline grow flex flex-column bt b--dark-gray bw2 dark-gray bg-near-white` }>
-                //         <h2 key={ node.id } className="pa0 ma0 lh-title barlow-condensed f3 f2-l word-wrap measure">{ node.title }</h2>
-                //         <p className="pa0 ma0 mt3 lh-copy overflow-hidden sans-serif dark-gray f4 f5-l word-wrap measure">{ node.custom_excerpt }</p>
-                //         <p className="pa0 ma0 self-end mt3"><Icon name="arrow-right" class="dark-gray" /></p>
-                //     </Link>
-                // }
             }
 
             return card
