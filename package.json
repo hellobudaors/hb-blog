@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "description": "Gatsby hello world starter",
+  "name": "hello-budaors",
+  "description": "Hello Budaörs",
   "license": "MIT",
   "scripts": {
     "dev": "gatsby develop",
