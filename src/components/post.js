@@ -35,7 +35,7 @@ class Post extends React.Component {
                 <div className={ Styles.page.m + Styles.sideSpacing + `post-container mt4 pb4` }>
                     <div className="lh-copy serif f4">{ body }</div>
                 </div>
-                <div dangerouslySetInnerHTML={ {
+                <div className={ Styles.page.m + Styles.sideSpacing + `mt4 pb4` } dangerouslySetInnerHTML={ {
                     __html: `
                 <div id="disqus_thread"></div>
                 
