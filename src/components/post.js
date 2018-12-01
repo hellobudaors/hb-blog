@@ -35,11 +35,11 @@ class Post extends React.Component {
         return (
             <div className="pt3">
 
-                <Helmet>
+                {/* <Helmet>
                 { (meta ?
                     <meta property="fb:app_id" content={ meta.facebook.appId } />
                 : null) }
-                </Helmet>
+                </Helmet> */}
 
                 <PostTitle featureImageUrl={ featureImageURL } featureImagePosition={ featureImagePosition }>{ title }</PostTitle>
                 <div className={ Styles.page.m + Styles.sideSpacing + `post-container mt4 pb4` }>

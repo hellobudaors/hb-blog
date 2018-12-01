@@ -31,6 +31,9 @@ class DefaultLayout extends React.Component {
                     <meta name="twitter:title" content="Hello Budaörs" />
                     <meta name="twitter:description" content="Hello Budaörs! Ismerjük meg városunkat együtt!" />
                     <meta name="twitter:url" content="https://hellobudaors.com/" />
+
+                    <meta property="fb:admins" content="katalin.domany" />
+                    <meta property="fb:admins" content="peter.zimon" />
                     
                     <body className="sans-serif dark-gray bg-white" />
                 </Helmet>
