@@ -13,16 +13,24 @@ module.exports = {
     },
     plugins: [
 
+        'gatsby-plugin-react-helmet',
+        
+        {
+            resolve: `gatsby-plugin-favicon`,
+            options: {
+                logo: "./src/assets/images/favicon.png",
+            },
+        },
+        
         {
             resolve: `gatsby-source-ghost`,
             options: {
                 apiUrl: `https://hellobudaors.ghost.io`,
                 clientId: `ghost-frontend`,
                 clientSecret: `e84b6bd2f7e3`
-            }
+            },
         },
 
-        'gatsby-plugin-react-helmet',
         {
             resolve: `gatsby-plugin-postcss`,
             options: {
