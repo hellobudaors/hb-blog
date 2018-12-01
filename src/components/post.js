@@ -49,7 +49,7 @@ class Post extends React.Component {
                 {(meta ? <div className={ Styles.page.m + Styles.sideSpacing + `post-container mt5 pb4` }>
                     <h2 className="f2 bw3 bt b--gold">Beszélgetés</h2>
 
-                    <FacebookProvider appId={ meta.facebook.appId }>
+                    <FacebookProvider language="hu_HU" appId={ meta.facebook.appId }>
                         <Comments href={ `https://hellobudaors.com/${slug}` } width="100%" colorscheme="light" />
                     </FacebookProvider>
                 </div> : null)}
