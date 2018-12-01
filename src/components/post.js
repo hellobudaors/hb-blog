@@ -35,27 +35,27 @@ class Post extends React.Component {
         return (
             <div className="pt3">
 
-                {/* <Helmet>
+                <Helmet>
                 { (meta ?
                     <meta property="fb:app_id" content={ meta.facebook.appId } />
                 : null) }
-                </Helmet> */}
+                </Helmet>
 
                 <PostTitle featureImageUrl={ featureImageURL } featureImagePosition={ featureImagePosition }>{ title }</PostTitle>
                 <div className={ Styles.page.m + Styles.sideSpacing + `post-container mt4 pb4` }>
                     <div className="lh-copy serif f4">{ body }</div>
                 </div>
 
-                {/* {(meta ? <div className={ Styles.page.m + Styles.sideSpacing + `post-container mt5 pb4` }>
+                {(meta ? <div className={ Styles.page.m + Styles.sideSpacing + `post-container mt5 pb4` }>
                     <h2 className="f2 bw3 bt b--gold">Beszélgetés</h2>
 
                     <FacebookProvider language="hu_HU" appId={ meta.facebook.appId }>
-                        <Comments href={ `https://hellobudaors.com/${slug}` } width="100%" colorscheme="light" />
+                        <Comments href={ `https://hellobudaors.com/posts/${slug}` } width="100%" colorscheme="light" />
                     </FacebookProvider>
-                </div> : null)} */}
+                </div> : null)}
 
 
-                <div dangerouslySetInnerHTML={{
+                {/* <div dangerouslySetInnerHTML={{
                     __html: `
                     <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -68,7 +68,7 @@ class Post extends React.Component {
                     `
                 }} />
 
-                <div class="fb-comments" data-href={`https://hellobudaors.com${slug}`} data-numposts="5"></div>
+                <div class="fb-comments" data-href={`https://hellobudaors.com${slug}`} data-numposts="5"></div> */}
 
             </div>
         )
