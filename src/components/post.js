@@ -40,18 +40,18 @@ class Post extends React.Component {
                 <div className={ Styles.page.m + Styles.sideSpacing + `post-container mt5 pb4` }>
                     <h2 className="f2 bw3 bt b--gold">Beszélgetés</h2>
                     <div class="fb-comments" data-href={ `https://hellobudaors.com/` + slug } data-width="736" data-numposts="5"></div>
-                    {/* <div dangerouslySetInnerHTML={ {
+                    <div id="fb-root"></div>
+                    <script dangerouslySetInnerHTML={ {
                         __html: `
-                        <div id="fb-root"></div>
-                        <script>(function(d, s, id) {
+                        (function(d, s, id) {
                         var js, fjs = d.getElementsByTagName(s)[0];
                         if (d.getElementById(id)) return;
                         js = d.createElement(s); js.id = id;
                         js.src = 'https://connect.facebook.net/hu_HU/sdk.js#xfbml=1&version=v3.2';
                         fjs.parentNode.insertBefore(js, fjs);
-                        }(document, 'script', 'facebook-jssdk'));</script>
+                        }(document, 'script', 'facebook-jssdk'));
                     `
-                    } } /> */}
+                    } } />
                 </div>
 
                 {/* <div className={ Styles.page.m + Styles.sideSpacing + `post-container mt5 pb4` }>
