@@ -16,7 +16,7 @@ module.exports = {
         {
             resolve: `gatsby-source-ghost`,
             options: {
-                apiUrl: `https://hello-budaors.ghost.io`,
+                apiUrl: `https://hellobudaors.ghost.io`,
                 clientId: `ghost-frontend`,
                 clientSecret: `e84b6bd2f7e3`
             }
