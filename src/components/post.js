@@ -36,7 +36,7 @@ class Post extends React.Component {
                     <div className="lh-copy serif f4">{ body }</div>
                 </div>
 
-                <div className={ Styles.page.m + Styles.sideSpacing + `post-container mt5 pb4` }>
+                {/* <div className={ Styles.page.m + Styles.sideSpacing + `post-container mt5 pb4` }>
                 
                     <h2 className="f2 bw3 bt b--gold">Beszélgetés</h2>
                 
@@ -61,7 +61,7 @@ class Post extends React.Component {
                         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
                     `
                         } } />
-                </div>
+                </div> */}
             </div>
         )
     }
