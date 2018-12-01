@@ -37,7 +37,7 @@ class Post extends React.Component {
                     <div className="lh-copy serif f4">{ body }</div>
                 </div>
 
-                {/* <div className={ Styles.page.m + Styles.sideSpacing + `post-container mt5 pb4` }>
+                <div className={ Styles.page.m + Styles.sideSpacing + `post-container mt5 pb4` }>
                     <h2 className="f2 bw3 bt b--gold">Beszélgetés</h2>
                     <div class="fb-comments" data-href={ `https://hellobudaors.com/` + slug } data-width="736" data-numposts="5"></div>
                     <div id="fb-root"></div>
@@ -52,7 +52,7 @@ class Post extends React.Component {
                         }(document, 'script', 'facebook-jssdk'));
                     `
                     } } />
-                </div> */}
+                </div>
 
                 {/* <div className={ Styles.page.m + Styles.sideSpacing + `post-container mt5 pb4` }>
                 

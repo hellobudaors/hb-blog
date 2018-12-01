@@ -38,7 +38,7 @@ class Card extends React.Component {
             if (this.props.cardtype === `first-on-index`) {
                 // The very first post on index
                 card = 
-                    <Link to={ link } className="col-12 db no-underline flex items-stretch white">
+                    <a href={ link } className="col-12 db no-underline flex items-stretch white">
                         <div className={ Styles.gutter + `grid-12 w-100` }>
                             <div className="col-4-l col-6-m col-12 pa3 pa4-ns flex flex-column justify-between bg-dark-gray bt bw3 b--gold">
                                 <h2 key={ node.id } className="pa0 ma0 lh-title barlow f3 f2-ns f1-l word-wrap">{ node.title }</h2>
@@ -51,7 +51,7 @@ class Card extends React.Component {
                                 backgroundPosition: `center ${featureImagePosition}`,
                             } } />
                         </div>
-                    </Link>
+                    </a>
             } else {
 
                 var colSpan = this.props.colspan + ` `
