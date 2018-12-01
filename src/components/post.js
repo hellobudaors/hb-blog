@@ -7,39 +7,31 @@ import PostTitle from "./post-title";
 class Post extends React.Component {
 
     render() {
-        // const children = this.props.children
         const post = this.props.data
 
-        // console.log(`post: ` + JSON.stringify(RichText.asText(post.title)))
+        var body, title, excerpt, featureImageURL, featureImagePosition, tags
 
-        const richTextLinkResolver = function (doc) {
-            // To be implemented
-        }
+        title = post.title
+        tags = post.tags
+        featureImageURL = post.feature_image
+        body = <section className="post-body" dangerouslySetInnerHTML={ {
+            __html: post.html,
+        } } />
 
-        var body, title, excerpt, featureImageURL, featureImageAlt
-        if (this.props.html) {
-            // Live post rendering
-            title = post.title.text
-            excerpt = post.excerpt.text
-            featureImageURL = post.feature_image.url
-            featureImageAlt = post.feature_image.alt
-            body = <section className="post-body" dangerouslySetInnerHTML={ {
-                __html: post.post_body.html,
-            } } />
-        } else {
-            // Preview rendering
-            title = RichText.asText(post.title)
-            excerpt = RichText.asText(post.excerpt)
-            featureImageURL = post.feature_image.url
-            featureImageAlt = post.feature_image.alt
-            body = <section className="post-body">{ RichText.render(post.post_body, richTextLinkResolver) }</section>
-        }
+        // Setting feature image position
+        tags.forEach(tag => {
+            if (tag.slug === `hash-kep-felul`) {
+                featureImagePosition = `top`
+            } 
+            if (tag.slug === `hash-kep-alul`) {
+                featureImagePosition = 'bottom'
+            }
+        })
 
         return (
             <div className="pt4">
-                <PostTitle featureImageUrl={ featureImageURL } featureImageAlt={ featureImageAlt }>{ title }</PostTitle>
+                <PostTitle featureImageUrl={ featureImageURL } featureImagePosition={ featureImagePosition }>{ title }</PostTitle>
                 <div className={ Styles.page.m + Styles.sideSpacing + `post-container mt4 pb4` }>
-                    { excerpt ? <div className="excerpt f3 lh-copy serif">{ excerpt }</div> : null }
                     <div className="lh-copy serif f4">{ body }</div>
                 </div>
             </div>

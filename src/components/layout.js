@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import '../assets/css/custom.css'
 import Header from "./header";
 import Footer from "./footer";
+// import MembersScript from '../assets/js/ghost-members.dropin'
 
 class DefaultLayout extends React.Component {
     render() {
@@ -14,6 +15,8 @@ class DefaultLayout extends React.Component {
                 <Helmet>
                     <title>Hello Budaörs</title>
                     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:500|Barlow:700" rel="stylesheet"></link>
+                    {/* <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> */}
+                    {/* <script type="text/javascript" src="../assets/js/custom.js"></script> */}
                     <body className="sans-serif dark-gray bg-white" />
                 </Helmet>
 
