@@ -1,13 +1,14 @@
 import React from "react"
 import Helmet from 'react-helmet'
-// import CustomJS from '../assets/js/custom.js'
 import '../assets/css/custom.css'
 import Header from "./header";
 import Footer from "./footer";
-// import MembersScript from '../assets/js/ghost-members.dropin'
+import { graphql } from "gatsby"
+import PropTypes from "prop-types"
 
 class DefaultLayout extends React.Component {
     render() {
+
         const children = this.props.children
 
         return(
@@ -30,8 +31,6 @@ class DefaultLayout extends React.Component {
                     <meta name="twitter:title" content="Hello Budaörs" />
                     <meta name="twitter:description" content="Hello Budaörs! Ismerjük meg városunkat együtt!" />
                     <meta name="twitter:url" content="https://hellobudaors.com/" />
-
-                    <meta property="fb:admins" content="katalin.domany" />
                     
                     <body className="sans-serif dark-gray bg-white" />
                 </Helmet>

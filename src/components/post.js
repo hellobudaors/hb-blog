@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { Styles } from "./styles"
 import PostTitle from "./post-title"
 import { FacebookProvider, Comments } from "react-facebook"
-import { graphql } from "gatsby"
+import Helmet from 'react-helmet'
 
 class Post extends React.Component {
 
@@ -34,6 +34,12 @@ class Post extends React.Component {
 
         return (
             <div className="pt4">
+
+                <Helmet>
+                { (meta ?
+                    <meta property="fb:app_id" content={ meta.facebook.appId } />
+                : null) }
+                </Helmet>
 
                 <PostTitle featureImageUrl={ featureImageURL } featureImagePosition={ featureImagePosition }>{ title }</PostTitle>
                 <div className={ Styles.page.m + Styles.sideSpacing + `post-container mt4 pb4` }>
