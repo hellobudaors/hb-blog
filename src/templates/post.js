@@ -19,6 +19,7 @@ query($id: String!) {
         id
         title
         html
+        slug
         feature_image
         tags {
             slug

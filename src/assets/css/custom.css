@@ -5,7 +5,15 @@
     background-size: cover;
 }
 
+.avatar {
+    width: 220px;
+    height: 220px;
+}
+
+
+/* -------------------------------------------------- */
 /* Post body */
+
 .post-body {
     word-break: break-word;
     display: flex;
