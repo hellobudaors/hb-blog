@@ -3,8 +3,6 @@ import Helmet from 'react-helmet'
 import '../assets/css/custom.css'
 import Header from "./header";
 import Footer from "./footer";
-import { graphql } from "gatsby"
-import PropTypes from "prop-types"
 
 class DefaultLayout extends React.Component {
     render() {
@@ -32,9 +30,6 @@ class DefaultLayout extends React.Component {
                     <meta name="twitter:description" content="Hello Budaörs! Ismerjük meg városunkat együtt!" />
                     <meta name="twitter:url" content="https://hellobudaors.com/" />
 
-                    {/* <meta property="fb:admins" content="katalin.domany" />
-                    <meta property="fb:admins" content="peter.zimon" /> */}
-                    
                     <body className="sans-serif dark-gray bg-white" />
                 </Helmet>
 
