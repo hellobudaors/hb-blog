@@ -15,16 +15,6 @@ export default class HTML extends React.Component {
             {this.props.headComponents}
             </head>
             <body {...this.props.bodyAttributes}>
-                <div id="fb-root"></div>
-                    <script dangerouslySetInnerHTML={{
-                        __html: `(function(d, s, id) { 
-                        var js, fjs = d.getElementsByTagName(s)[0];
-                        if (d.getElementById(id)) return;
-                        js = d.createElement(s); js.id = id;
-                        js.src = 'https://connect.facebook.net/hu_HU/sdk.js#xfbml=1&version=v3.2';
-                        fjs.parentNode.insertBefore(js, fjs);
-                        }(document, 'script', 'facebook-jssdk'));`
-                    }}></script>
                 {this.props.preBodyComponents}
                 <div
                     key={`body`}
@@ -32,6 +22,16 @@ export default class HTML extends React.Component {
                     dangerouslySetInnerHTML={{ __html: this.props.body }}
                 />
                 {this.props.postBodyComponents}
+                <div id="fb-root"></div>
+                <script dangerouslySetInnerHTML={ {
+                    __html: `(function(d, s, id) { 
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = 'https://connect.facebook.net/hu_HU/sdk.js#xfbml=1&version=v3.2';
+                fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));`
+                } }></script>
             </body>
             </html>
         )
