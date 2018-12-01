@@ -18,12 +18,12 @@ export default () => {
                         <h4 className="tc f4 ma0 pa0 mt3">Domány Kati</h4>
                     </div>
                     <div className="mh3">
-                        <img src={ VirtAgnes } className="bg-gold br-100 avatar flex items-center justify-center" />
-                        <h4 className="tc f4 ma0 pa0 mt3">Virt Ágnes</h4>
-                    </div>
-                    <div className="mh3">
                         <img src={ GerzsenyiJudit } className="bg-gold br-100 avatar flex items-center justify-center" />
                         <h4 className="tc f4 ma0 pa0 mt3">Gerzsenyi Judit</h4>
+                    </div>
+                    <div className="mh3">
+                        <img src={ VirtAgnes } className="bg-gold br-100 avatar flex items-center justify-center" />
+                        <h4 className="tc f4 ma0 pa0 mt3">Virt Ágnes</h4>
                     </div>
                 </div>
 
