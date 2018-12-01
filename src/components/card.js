@@ -14,7 +14,7 @@ class Card extends React.Component {
                 featureImagePosition = `center`, 
                 tags = node.tags, 
                 featuredStyle, 
-                link = `/posts/` + node.slug + `?no-cache=1`
+                link = `/posts/` + node.slug
 
             // Setting feature image position
             tags.forEach(tag => {
