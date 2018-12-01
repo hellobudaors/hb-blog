@@ -15,6 +15,7 @@ export default class HTML extends React.Component {
             {this.props.headComponents}
             </head>
             <body {...this.props.bodyAttributes}>
+                <div id="fb-root"></div>
                 {this.props.preBodyComponents}
                 <div
                     key={`body`}
@@ -22,7 +23,6 @@ export default class HTML extends React.Component {
                     dangerouslySetInnerHTML={{ __html: this.props.body }}
                 />
                 {this.props.postBodyComponents}
-                <div id="fb-root"></div>
                 <script dangerouslySetInnerHTML={ {
                     __html: `(function(d, s, id) { 
                 var js, fjs = d.getElementsByTagName(s)[0];
