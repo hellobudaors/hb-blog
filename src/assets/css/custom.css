@@ -14,15 +14,27 @@
     height: 800px;
 }
 
+.first-index-card {
+    min-height: 600px;
+}
+
 @media screen and (max-width: 992px) {
     .post-title-bg {
         height: 600px;
+    }
+
+    .first-index-card {
+        min-height: 400px;
     }
 }
 
 @media screen and (max-width: 600px) {
     .post-title-bg {
         height: 500px;
+    }
+
+    .first-index-card {
+        min-height: auto;
     }
 }
 

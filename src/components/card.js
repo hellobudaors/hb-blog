@@ -40,7 +40,7 @@ class Card extends React.Component {
                 card = 
                     <Link to={ link } className="col-12 db no-underline flex items-stretch white">
                         <div className={ Styles.gutter + `grid-12 w-100` }>
-                            <div className="col-4-l col-6-m col-12 pa3 pa4-ns flex flex-column justify-between bg-dark-gray bt bw3 b--gold">
+                            <div className="col-4-l col-6-m col-12 pa3 pa4-ns flex flex-column justify-between bg-dark-gray bt bw3 b--gold first-index-card">
                                 <h2 key={ node.id } className="pa0 ma0 lh-title barlow f3 f2-ns f1-l word-wrap">{ node.title }</h2>
                                 <p className="pa0 ma0 mt4 lh-copy flex-auto f5 f4-ns word-wrap">{ node.custom_excerpt }</p>
                                 <p className="pa0 ma0 self-end mt4"><Icon name="arrow-right" class="white" /></p>
